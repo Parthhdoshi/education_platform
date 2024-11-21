@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import { Providers } from "./Providers";
 import { cn } from "./lib/utils";
+import NextTopLoader from 'nextjs-toploader';
+import OfflineNotification from "./components/OfflineNavigator";
 
 export const metadata: Metadata = {
   title: "Education",
@@ -24,8 +26,12 @@ export default function RootLayout({
         '[&_.theme-toggle-wrapper]:opacity-0 [&_.theme-toggle-wrapper]:animate-fade-in'
       )}
     >
+       <NextTopLoader
+          showSpinner={false}
+        />
       <Providers>
         <Navbar />
+        <OfflineNotification />
         <main>{children}</main>
       </Providers>
     </body>
