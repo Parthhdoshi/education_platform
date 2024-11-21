@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Spotlight } from "./ui/Spotlight";
+import { useTheme } from "next-themes";
 
 const textVariants = {
   enter: { y: 20, opacity: 0 },
@@ -19,8 +20,12 @@ const phrases = [
 ];
 
 const Hero = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const { theme } = useTheme();
+
+  const fillColor = theme === "dark" ? "white" : "blue";
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % phrases.length);
@@ -31,16 +36,17 @@ const Hero = () => {
 
   return (
     <section
-      className="h-[90vh] w-full  flex md:items-center md:justify-center bg-gray-900 dark:bg-blue-900 antialiased bg-grid-white/[0.02] relative overflow-hidden"
+      className="h-[90vh] w-full flex items-center justify-center bg-blue-100 dark:bg-blue-900 antialiased bg-grid-white/[0.02] relative overflow-hidden"
       id="home"
     >
+      
       <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="white"
+        className="-top-40 left-0 md:left-60 md:-top-30"
+        fill={fillColor}
       />
 
-      <div className="container mx-auto px-4 text-center">
-        <h1 className="text-6xl font-bold mb-4 dark:text-gray-400 flex justify-center items-center gap-3 flex-wrap">
+      <div className="container mx-auto px-4 mt-0 text-center">
+        <h1 className="text-6xl font-bold mb-4 text-gray-900 dark:text-gray-100 flex justify-center items-center gap-3 flex-wrap">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -67,7 +73,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-xl mb-8 dark:text-gray-300"
+          className="text-xl mb-8 text-gray-900 dark:text-gray-300"
         >
           The best solution for your educational needs
         </motion.p>
@@ -91,27 +97,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-export function GridPattern() {
-  const columns = 41;
-  const rows = 11;
-  return (
-    <div className="flex bg-gray-100 dark:bg-neutral-900 flex-shrink-0 flex-wrap justify-center items-center gap-x-px gap-y-px  scale-105">
-      {Array.from({ length: rows }).map((_, row) =>
-        Array.from({ length: columns }).map((_, col) => {
-          const index = row * columns + col;
-          return (
-            <div
-              key={`${col}-${row}`}
-              className={`w-10 h-10 flex flex-shrink-0 rounded-[2px] ${
-                index % 2 === 0
-                  ? "bg-gray-50 dark:bg-neutral-950"
-                  : "bg-gray-50 dark:bg-neutral-950 shadow-[0px_0px_1px_3px_rgba(255,255,255,1)_inset] dark:shadow-[0px_0px_1px_3px_rgba(0,0,0,1)_inset]"
-              }`}
-            />
-          );
-        })
-      )}
-    </div>
-  );
-}
