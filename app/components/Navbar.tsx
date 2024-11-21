@@ -1,17 +1,16 @@
-import { MobileMenu } from './MobileMenu';
-import { ThemeToggle } from './ThemeToggle';
-import Link from 'next/link';
+import { MobileMenu } from "./MobileMenu";
+import { ThemeToggle } from "./ThemeToggle";
+import Link from "next/link";
 
 const menuItems = [
-  { title: 'Home', path: '/' },
-  { title: 'Products', path: '/products' },
-  { title: 'Services', path: '/services' },
-  { title: 'About', path: '/about' },
-  { title: 'Contact', path: '/contact' }
+  { title: "Home", path: "/" },
+  { title: "Products", path: "/products" },
+  { title: "Services", path: "/services" },
+  { title: "About", path: "/about" },
+  { title: "Contact", path: "/contact" },
 ];
 
 export default async function Navbar() {
-
   return (
     <nav className="sticky top-0 z-50 w-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow-sm transition-colors duration-200">
       {/* Main Navbar */}
@@ -23,8 +22,11 @@ export default async function Navbar() {
           {/* Logo */}
           <div className="flex-1 flex items-center justify-center sm:justify-start">
             <div className="flex-shrink-0 flex items-center">
-              <Link href="/" className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                Mentor Education
+              <Link
+                href="/"
+                className="text-2xl font-bold text-blue-800 dark:text-blue-400"
+              >
+                Minimalistic Learning
               </Link>
             </div>
           </div>
