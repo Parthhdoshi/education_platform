@@ -1,3 +1,4 @@
+import { AppBarAuth } from "./AppBarAuth";
 import { MobileMenu } from "./MobileMenu";
 import { ThemeToggle } from "./ThemeToggle";
 import Link from "next/link";
@@ -7,8 +8,6 @@ const menuItems = [
   { title: "Services", path: "/services" },
   { title: "About", path: "/about" },
   { title: "Contact", path: "/contact" },
-  { title: "Login", path: "/login" },
-  { title: "Sign Up", path: "/signup" },
 ];
 
 export default async function Navbar() {
@@ -43,6 +42,7 @@ export default async function Navbar() {
                 {item.title}
               </Link>
             ))}
+            <AppBarAuth/>
             <ThemeToggle />
           </div>
         </div>
