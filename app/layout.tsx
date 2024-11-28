@@ -7,8 +7,8 @@ import NextTopLoader from 'nextjs-toploader';
 import OfflineNotification from "./components/OfflineNavigator";
 
 export const metadata: Metadata = {
-  title: "Education",
-  description: "Education",
+  title: "Minimalistic Learning",
+  description: "Minimalistic Learning.",
 };
 
 export default function RootLayout({
