@@ -1,6 +1,5 @@
 import { AppBarAuth } from "./AppBarAuth";
 import { MobileMenu } from "./MobileMenu";
-import { ThemeToggle } from "./ThemeToggle";
 import Link from "next/link";
 
 const menuItems = [
@@ -24,7 +23,7 @@ export default async function Navbar() {
             <div className="flex-shrink-0 flex items-center">
               <Link
                 href="/"
-                className="text-2xl font-bold text-blue-800 dark:text-blue-400"
+                className="text-2xl font-bold text-blue-800 dark:text-blue-400 "
               >
                 Minimalistic Learning
               </Link>
@@ -43,7 +42,7 @@ export default async function Navbar() {
               </Link>
             ))}
             <AppBarAuth/>
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
           </div>
         </div>
       </div>
