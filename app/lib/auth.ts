@@ -136,7 +136,7 @@ export const authOptions = {
           username: { label: 'email', type: 'text', placeholder: '' },
           password: { label: 'password', type: 'password', placeholder: '' },
         },
-        async authorize(credentials) {
+        async authorize(credentials:any) {
           console.log("credentials",credentials)
           if (process.env.LOCAL_CMS_PROVIDER) {
             return {
