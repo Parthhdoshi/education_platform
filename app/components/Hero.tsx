@@ -25,6 +25,7 @@ const Hero = () => {
   const { theme } = useTheme();
 
   const fillColor = theme === "dark" ? "white" : "blue";
+  console.log(fillColor)
   
   useEffect(() => {
     const interval = setInterval(() => {

@@ -1,7 +1,7 @@
 // import db from '@/db';
-// import CredentialsProvider from 'next-auth/providers/credentials';
-// import { JWTPayload, SignJWT, importJWK } from 'jose';
-// import bcrypt from 'bcrypt';
+import CredentialsProvider from 'next-auth/providers/credentials';
+import { JWTPayload, SignJWT, importJWK } from 'jose';
+import bcrypt from 'bcrypt';
 // import prisma from '@/db';
 import GoogleProvider from 'next-auth/providers/google';
 import { NextAuthOptions } from 'next-auth';
@@ -109,12 +109,62 @@ export interface session extends Session {
 //   };
 // }
 
+const generateJWT = async (payload: JWTPayload) => {
+  const secret = process.env.JWT_SECRET || 'secret';
+
+  const jwk = await importJWK({ k: secret, alg: 'HS256', kty: 'oct' });
+
+  const jwt = await new SignJWT(payload)
+    .setProtectedHeader({ alg: 'HS256' })
+    .setIssuedAt()
+    .setExpirationTime('365d')
+    .sign(jwk);
+
+  return jwt;
+};
+
 export const authOptions = {
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID || '',
       clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
     }),
+    CredentialsProvider({
+      name: 'credentials',
+        credentials: {
+          username: { label: 'email', type: 'text', placeholder: '' },
+          password: { label: 'password', type: 'password', placeholder: '' },
+        },
+        async authorize(credentials) {
+          console.log("credentials",credentials)
+          if (process.env.LOCAL_CMS_PROVIDER) {
+            return {
+              id: '1',
+              name: 'test',
+              email: 'test@gmail.com',
+              token: await generateJWT({
+                id: '1',
+              }),
+            };
+          }
+
+          const hashedPassword = await bcrypt.hash(credentials.password, 10);
+
+          const userDb = await User.findOne({ email: credentials.username });
+
+          if (
+            userDb &&
+            userDb.password &&
+            (await bcrypt.compare(credentials.password, userDb.password)) &&
+            userDb?.appxAuthToken
+          ) {
+            return null;
+          }
+
+
+            return null;
+        }
+    })
     // CredentialsProvider({
     //   name: 'Credentials',
     //   credentials: {
@@ -227,7 +277,7 @@ export const authOptions = {
       const existingUser  = await User.findOne({ email: user.email });
       if (!existingUser ) {
         const newUser  = new User({ email: user.email, profile: { firstName: user.name } });
-        await newUser .save();
+        await newUser.save();
       }
       return true;
     },
@@ -258,7 +308,7 @@ export const authOptions = {
   //     return newToken;
   //   },
   // },
-  // pages: {
-  //   signIn: '/signin',
-  // },
+  pages: {
+    signIn: '/signin',
+  },
 } satisfies NextAuthOptions;
