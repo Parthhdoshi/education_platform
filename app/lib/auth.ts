@@ -9,6 +9,7 @@ import { Session } from 'next-auth';
 // import { JWT } from 'next-auth/jwt';
 import connectDB from './connectDB';
 import User from '../models/user';
+import { console } from 'inspector';
 
 // interface AppxSigninResponse {
 //   data: {
@@ -149,6 +150,7 @@ export const authOptions = {
           }
 
           const hashedPassword = await bcrypt.hash(credentials.password, 10);
+          console.log(hashedPassword)
 
           const userDb = await User.findOne({ email: credentials.username });
 
