@@ -2,8 +2,8 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Spotlight } from "./ui/Spotlight";
 import { useTheme } from "next-themes";
+import FullScreenVideo from "./FullScreenVideo ";
 
 const textVariants = {
   enter: { y: 20, opacity: 0 },
@@ -40,13 +40,15 @@ const Hero = () => {
       id="home"
     >
       
-      <Spotlight
+      {/* <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-30"
         fill={fillColor}
-      />
+      /> */}
 
       <div className="container mx-auto px-4 mt-0 text-center">
-        <h1 className="text-6xl font-bold mb-4 text-gray-900 dark:text-gray-100 flex justify-center items-center gap-3 flex-wrap">
+        <FullScreenVideo videoSrc="./HeroVideo.mp4" />
+        <h1 className="text-6xl font-bold mb-4 text-gray-100 gap-3 flex-wrap absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center z-10">
+       
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -68,8 +70,7 @@ const Hero = () => {
             </motion.span>
           </AnimatePresence>
         </h1>
-
-        <motion.p
+       <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
