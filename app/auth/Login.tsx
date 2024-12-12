@@ -18,7 +18,7 @@ const LoginPage = async () => {
     <div className="flex flex-col items-center p-10 shadow-2xl rounded-md bg-white">
       <h1 className="mt-5 mb-4 text-4xl font-bold text-blue-800">Sign In</h1>
       <CredentialsForm />
-      <span className="text-2xl font-semibold text-white text-center mt-8">
+      <span className="text-2xl font-semibold text-slate-900 text-center mt-4">
         Or
       </span>
       <GoogleSignInButton />
