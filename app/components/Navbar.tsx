@@ -1,51 +1,77 @@
-import { AppBarAuth } from "./AppBarAuth";
-import { MobileMenu } from "./MobileMenu";
-import Link from "next/link";
+"use client";
 
-const menuItems = [
-  { title: "Home", path: "/" },
-  { title: "Services", path: "/services" },
-  { title: "About", path: "/about" },
-  { title: "Contact", path: "/contact" },
-];
-
-export default async function Navbar() {
+const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow-sm transition-colors duration-200">
-      {/* Main Navbar */}
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Mobile Menu */}
-          <MobileMenu menuItems={menuItems} />
+    <nav className="bg-[#E7F4FF] py-4 px-6 shadow-md">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        {/* Logo */}
+        <div className="text-blue-600 font-semibold text-lg md:text-xl">
+          <span className="tracking-wider">MINIMALISTIC LEARNING</span>
+        </div>
 
-          {/* Logo */}
-          <div className="flex-1 flex items-center justify-center sm:justify-start">
-            <div className="flex-shrink-0 flex items-center">
-              <Link
-                href="/"
-                className="text-2xl font-bold text-blue-800 dark:text-blue-400 "
-              >
-                Minimalistic Learning
-              </Link>
-            </div>
-          </div>
+        {/* Navigation Links */}
+        <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
+          <li>
+            <a href="#" className="hover:text-blue-600 transition duration-300">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-blue-600 transition duration-300">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-blue-600 transition duration-300">
+              Courses
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-blue-600 transition duration-300">
+              Contact Us
+            </a>
+          </li>
+        </ul>
 
-          {/* Desktop Navigation */}
-          <div className="hidden sm:flex sm:items-center">
-            {menuItems.map((item) => (
-              <Link
-                key={item.path}
-                href={item.path}
-                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-md font-medium transition-colors duration-200"
-              >
-                {item.title}
-              </Link>
-            ))}
-            <AppBarAuth/>
-            {/* <ThemeToggle /> */}
-          </div>
+        {/* Buttons */}
+        <div className="flex space-x-4">
+          <a
+            href="#"
+            className="text-blue-600 font-medium hover:text-blue-800 transition duration-300"
+          >
+            Sign up
+          </a>
+          <a
+            href="#"
+            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300"
+          >
+            Log in
+          </a>
+        </div>
+
+        {/* Mobile Menu Placeholder */}
+        <div className="md:hidden">
+          <button className="text-gray-700 focus:outline-none">
+            {/* Hamburger Menu Icon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </nav>
   );
-}
+};
+
+export default Navbar;

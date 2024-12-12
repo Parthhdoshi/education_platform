@@ -1,96 +1,72 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
-import { Spotlight } from "./ui/Spotlight";
-import { useTheme } from "next-themes";
-
-const textVariants = {
-  enter: { y: 20, opacity: 0 },
-  center: { y: 0, opacity: 1 },
-  exit: { y: -20, opacity: 0 },
-};
-
-const phrases = [
-  "School",
-  "Tuition",
-  "Mentor Education",
-  "Learning Center",
-  "Knowledge Hub",
-];
+import Image from "next/image";
+import { useState } from "react";
 
 const Hero = () => {
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const { theme } = useTheme();
-
-  const fillColor = theme === "dark" ? "white" : "blue";
-  
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % phrases.length);
-    }, 3000); // Change text every 3 seconds
-
-    return () => clearInterval(interval);
-  }, []);
+  const [searchQuery, setSearchQuery] = useState("");
 
   return (
-    <section
-      className="h-[90vh] w-full flex items-center justify-center bg-blue-100 dark:bg-blue-900 antialiased bg-grid-white/[0.02] relative overflow-hidden"
-      id="home"
-    >
-      
-      <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-30"
-        fill={fillColor}
-      />
+    <section className="h-[90vh] bg-blue-50 flex items-center justify-center px-6 md:px-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        {/* Left Section */}
+        <div>
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-4">
+            Your Learning <span className="text-blue-600">Journey</span> Starts
+            <br />
+            <span className="text-blue-600">Here</span>
+          </h1>
+          <p className="text-gray-700 text-lg md:text-xl mb-6">
+            Explore diverse courses, connect with top instructors, and achieve
+            your dreams
+          </p>
 
-      <div className="container mx-auto px-4 mt-0 text-center">
-        <h1 className="text-6xl font-bold mb-4 text-gray-900 dark:text-gray-100 flex justify-center items-center gap-3 flex-wrap">
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            Welcome to
-          </motion.span>
-          <AnimatePresence mode="wait">
-            <motion.span
-              key={currentIndex}
-              variants={textVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{ duration: 0.5 }}
-              className="text-blue-600 dark:text-white"
+          {/* Slim Search Bar */}
+          <div className="flex items-center w-full md:w-[400px] bg-white rounded-full shadow-md overflow-hidden border border-gray-200">
+            <span className="text-gray-400 pl-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1114.5 3a7.5 7.5 0 012.15 14.65z"
+                />
+              </svg>
+            </span>
+            <input
+              type="text"
+              placeholder="Browse Courses"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full px-2 py-2 text-sm text-gray-700 focus:outline-none"
+            />
+            <button
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 text-sm font-semibold transition duration-300"
             >
-              {phrases[currentIndex]}
-            </motion.span>
-          </AnimatePresence>
-        </h1>
+              Start
+            </button>
+          </div>
+        </div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-xl mb-8 text-gray-900 dark:text-gray-300"
-        >
-          The best solution for your educational needs
-        </motion.p>
-
-        <motion.a
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold inline-block 
-                   hover:bg-blue-50 dark:bg-blue-600 dark:text-white dark:hover:bg-blue-700
-                   transition-colors duration-200 shadow-lg hover:shadow-xl"
-          href="#contact"
-        >
-          Get Started
-        </motion.a>
+        {/* Right Section: Image */}
+        <div className="flex justify-center md:justify-end">
+          <div className="relative w-[300px] md:w-[400px] h-auto">
+            <Image
+              src="/image.png" // Replace with the uploaded image path
+              alt="Learning Illustration"
+              width={400}
+              height={400}
+              priority
+              className="object-contain"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
