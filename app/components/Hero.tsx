@@ -7,7 +7,7 @@ const Hero = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
-    <section className="h-[90vh] bg-blue-50 flex items-center justify-center px-6 md:px-12">
+    <section className="h-[90vh] flex items-center justify-center px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Section */}
         <div>
@@ -22,8 +22,8 @@ const Hero = () => {
           </p>
 
           {/* Slim Search Bar */}
-          <div className="flex items-center w-full md:w-[400px] bg-white rounded-full shadow-md overflow-hidden border border-gray-200">
-            <span className="text-gray-400 pl-3">
+          <div className="flex items-center w-full bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+            <span className="text-gray-400 pl-3 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4"
@@ -44,12 +44,12 @@ const Hero = () => {
               placeholder="Browse Courses"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-2 py-2 text-sm text-gray-700 focus:outline-none"
+              className="w-full px-2 py-2 text-sm text-gray-700 focus:outline-none my-2"
             />
             <button
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 text-sm font-semibold transition duration-300"
+              className="bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-xl font-semibold transition duration-300 w-2/6 p-4"
             >
-              Start
+              Start Learning
             </button>
           </div>
         </div>

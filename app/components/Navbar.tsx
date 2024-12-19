@@ -2,7 +2,7 @@
 
 const Navbar = () => {
   return (
-    <nav className="bg-[#E7F4FF] py-4 px-6 shadow-md">
+    <nav className="bg-[#daf0ff] py-4 px-6">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-blue-600 font-semibold text-lg md:text-xl">
