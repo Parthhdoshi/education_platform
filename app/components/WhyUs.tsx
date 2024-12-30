@@ -1,7 +1,7 @@
 export default function WhyUs() {
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen ">
+      <div className="flex items-center justify-center min-h-min ">
         <div className="max-w-6xl flex flex-col md:flex-row items-center p-8">
           {/* Left Section - Image */}
           <div className="w-full md:w-1/2 mb-8 md:mb-0 flex justify-center">
@@ -30,7 +30,7 @@ export default function WhyUs() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-16 items-center justify-center min-h-screen  p-8">
+      <div className="flex flex-col gap-16 items-center justify-center min-h-min p-8">
         {/* First Section */}
         <div className="max-w-6xl flex flex-col md:flex-row items-center gap-8">
           {/* Left Section - Text */}
@@ -56,7 +56,7 @@ export default function WhyUs() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-16 items-center justify-center min-h-screen  p-8">
+      <div className="flex flex-col gap-16 items-center justify-center min-h-min  p-8">
         {/* Section 1: Earn Recognised Certificates */}
         <div className="max-w-6xl grid grid-cols-1 md:grid-cols-2 items-center gap-8">
           {/* Left Section - Image */}
