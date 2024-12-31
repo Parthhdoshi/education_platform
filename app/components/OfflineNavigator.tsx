@@ -30,7 +30,7 @@ const OfflineNotification = () => {
         <div className="fixed inset-0 flex flex-col items-center justify-center space-y-4 bg-white dark:bg-[#020817] z-50">
             <div className="flex flex-col items-center space-y-4 p-6 rounded-lg">
                 <Image 
-                    src="/wifi-disconnected.png" 
+                    src="/offline.svg" 
                     alt="Offline" 
                     width={500} 
                     height={100} 

@@ -13,7 +13,7 @@ export default function Home() {
       <ExploreCourse/>
       <Services />
       <WhyUs/>
-      <InfiniteMovingCardsDemo/>
+      {/* <InfiniteMovingCardsDemo/> */}
       <Glance />
       <Footer />
     </div>

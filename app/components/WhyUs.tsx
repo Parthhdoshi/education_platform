@@ -1,8 +1,8 @@
 export default function WhyUs() {
   return (
     <>
-      <div className="flex items-center justify-center min-h-min ">
-        <div className="max-w-6xl flex flex-col md:flex-row items-center p-8">
+      <div className="flex items-center justify-center ">
+        <div className="max-w-6xl flex flex-col md:flex-row items-center h-1/2 p-8 mb-10">
           {/* Left Section - Image */}
           <div className="w-full md:w-1/2 mb-8 md:mb-0 flex justify-center">
             <img
@@ -30,9 +30,9 @@ export default function WhyUs() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-16 items-center justify-center min-h-min p-8">
+      <div className="flex flex-col gap-16 items-center justify-center h-1/2 p-8 mb-10">
         {/* First Section */}
-        <div className="max-w-6xl flex flex-col md:flex-row items-center gap-8">
+        <div className="max-w-6xl flex flex-col md:flex-row items-center gap-8 ">
           {/* Left Section - Text */}
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
@@ -56,9 +56,9 @@ export default function WhyUs() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-16 items-center justify-center min-h-min  p-8">
+      <div className="flex flex-col gap-16 items-center justify-center  p-8 mb-10">
         {/* Section 1: Earn Recognised Certificates */}
-        <div className="max-w-6xl grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+        <div className="max-w-6xl flex flex-col md:flex-row items-center gap-8">
           {/* Left Section - Image */}
           <div className="flex justify-center">
             <img
@@ -81,9 +81,10 @@ export default function WhyUs() {
             </button>
           </div>
         </div>
-
+      </div>
+      <div className="flex flex-col gap-16 items-center justify-center  p-8 mb-10">
         {/* Section 2: Learn from Industry Experts */}
-        <div className="max-w-6xl grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+        <div className="max-w-6xl flex flex-col md:flex-row items-center gap-8">
           {/* Left Section - Content */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
