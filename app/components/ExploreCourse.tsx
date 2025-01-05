@@ -18,7 +18,9 @@ export default function ExploreCourse() {
       sx={{ width: "100%", typography: "body1", fontWeight: "bold" }}
       className="max-w-7xl mx-auto h-full"
     >
-      <p className="text-4xl md:text-6xl text-center pb-4">  Explore Course </p>
+    <p className="text-4xl md:text-6xl text-center pb-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+  Explore Course
+</p>
       <TabContext value={value}>
         <Box>
           <TabList onChange={handleChange} aria-label="lab API tabs example" centered>

@@ -57,16 +57,18 @@ const Hero = () => {
 
 {/* Right Section: Image */}
 <div className="order-1 md:order-2 flex justify-center md:justify-end">
-  <div className="relative w-[300px] md:w-[400px] h-auto">
-    <Image
-      src="/image.png" // Replace with the uploaded image path
-      alt="Learning Illustration"
-      width={400}
-      height={400}
-      priority
-      className="object-contain"
-    />
-  </div>
+<div className="relative w-[300px] md:w-[400px] h-[300px] md:h-[400px] bg-white rounded-full flex items-center justify-center shadow-lg overflow-hidden">
+  <Image
+    src="/images/herostudent.png" // Corrected image path
+    alt="Learning Illustration"
+    width={2000} // Adjust width and height proportionally to the container
+    height={2000}
+    priority
+    className="object-contain"
+  />
+</div>
+
+
 </div>
 
       </div>
