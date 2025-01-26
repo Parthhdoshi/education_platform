@@ -34,14 +34,14 @@ const AboutUs = () => {
               Our Journey
             </h2>
             <p className="text-gray-600 mb-4">
-              <strong>2023: Building the Team</strong>
+              <strong>2024: Building the Team</strong>
               <br />
               Co-founders brought together developers and education enthusiasts
               to design a platform that simplifies the process for educators
               and improves learning outcomes for students.
             </p>
             <p className="text-gray-600">
-              <strong>2024: Beta Version Launched</strong>
+              <strong>2025: Beta Version Launched</strong>
               <br />
               Released the platform’s first version, offering basic course
               creation tools and support for educators.

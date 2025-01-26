@@ -75,14 +75,13 @@ const ContactUs = () => {
             </p>
             <ul className="space-y-2">
               <li className="text-gray-700">
-                <strong>Email:</strong> support@minimalisticlearning.com
+                <strong>Email:</strong> minimalisticlearning2024@gmail.com
               </li>
               <li className="text-gray-700">
                 <strong>Phone:</strong> +1 (123) 456-7890
               </li>
               <li className="text-gray-700">
-                <strong>Address:</strong> 123 Minimalist Lane, Learning City,
-                USA
+                <strong>Address:</strong> Alma Street,Coventry,England,UK
               </li>
             </ul>
           </div>
