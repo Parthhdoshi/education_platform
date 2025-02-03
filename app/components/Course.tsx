@@ -28,7 +28,7 @@ const Course = () => {
               title: "Introduction to Public Health",
               description:
                 "Explore the basics of public health, including strategies for well-being.",
-              img: "https://via.placeholder.com/300x200",
+              img: "https://assets.manutd.com/AssetPicker/images/0/0/20/87/1333066/Player_Profile_Kobee_Mainoo1719482688199.jpg",
             },
             {
               title: "Creative Writing Workshop",
