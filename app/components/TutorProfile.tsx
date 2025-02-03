@@ -17,6 +17,17 @@ const months = [
   "December",
 ];
 
+const courses = {
+  Mathematics: ["Algebra", "Calculus", "Geometry", "Trigonometry"],
+  "Digital Marketing": [
+    "SEO",
+    "Social Media Marketing",
+    "Content Marketing",
+    "PPC",
+  ],
+  Programming: ["JavaScript", "Python", "Java", "C++"],
+};
+
 // Function to get the number of days in a month
 const getDaysInMonth = (month: number, year: number) => {
   return new Date(year, month + 1, 0).getDate();
@@ -24,17 +35,41 @@ const getDaysInMonth = (month: number, year: number) => {
 
 const TutorProfile: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState<number | null>(null);
-  const [selectedMonth, setSelectedMonth] = useState<number>(new Date().getMonth()); // Default to current month
-  const [selectedYear] = useState<number>(new Date().getFullYear()); // Default to current year
+  const [selectedMonth, setSelectedMonth] = useState<number>(new Date().getMonth());
+  const [selectedYear] = useState<number>(new Date().getFullYear());
+  const [address, setAddress] = useState<string>("");
+  const [time, setTime] = useState<string>("");
+  const [selectedCourse, setSelectedCourse] = useState<keyof typeof courses | null>(null);
+  const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
+  const [additionalDetails, setAdditionalDetails] = useState<string>("");
+  const [bookingDetails, setBookingDetails] = useState<any>(null);
 
   const handleDateSelect = (date: number) => {
     setSelectedDate(date);
-    console.log(`Selected Date: ${months[selectedMonth]} ${date}, ${selectedYear}`);
   };
 
   const handleMonthChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedMonth(Number(event.target.value));
-    setSelectedDate(null); // Reset selected date when month changes
+    setSelectedDate(null);
+  };
+
+  const handleBooking = () => {
+    if (!selectedDate || !address || !time || !selectedCourse || !selectedTopic) {
+      alert("Please fill in all fields to complete the booking.");
+      return;
+    }
+
+    const bookingInfo = {
+      date: `${months[selectedMonth]} ${selectedDate}, ${selectedYear}`,
+      address,
+      time,
+      course: selectedCourse,
+      topic: selectedTopic,
+      additionalDetails,
+    };
+
+    setBookingDetails(bookingInfo);
+    alert("Your booking has been successfully submitted!");
   };
 
   const daysInMonth = getDaysInMonth(selectedMonth, selectedYear);
@@ -50,30 +85,24 @@ const TutorProfile: React.FC = () => {
           <div className="lg:w-2/3">
             <div className="flex items-center space-x-4 mb-6">
               <img
-                src="https://assets.manutd.com/AssetPicker/images/0/0/20/87/1333066/Player_Profile_Kobee_Mainoo1719482688199.jpg"
+                src="https://via.placeholder.com/150"
                 alt="Tutor Profile"
                 className="w-20 h-20 rounded-full shadow"
               />
               <div>
-                <h2 className="text-2xl font-semibold text-gray-800">
-                  John Doe
-                </h2>
+                <h2 className="text-2xl font-semibold text-gray-800">John Doe</h2>
                 <p className="text-sm text-gray-500">Price: £12-£20/hour</p>
                 <p className="text-yellow-500">★★★★★</p>
               </div>
             </div>
             <p className="text-gray-700 font-medium mb-4">
               Expertise:{" "}
-              <span className="font-normal">
-                Digital Marketing and Mathematics
-              </span>
+              <span className="font-normal">Digital Marketing and Mathematics</span>
             </p>
             <div className="bg-gray-100 p-4 rounded-lg shadow-inner">
               <h3 className="text-lg font-bold text-gray-900 mb-2">About Tutor</h3>
               <p className="text-gray-600 mb-2">
-                Experienced tutor with expertise in Digital Marketing and
-                Mathematics, dedicated to simplifying complex concepts for
-                learners.
+                Experienced tutor with expertise in Digital Marketing and Mathematics, dedicated to simplifying complex concepts for learners.
               </p>
               <p className="text-gray-600">
                 With 5+ years in SEO, social media management, and digital
@@ -85,13 +114,11 @@ const TutorProfile: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Section - Availability and Reviews */}
+          {/* Right Section - Booking Form */}
           <div className="lg:w-1/3 space-y-6">
+            {/* Calendar */}
             <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4">
-                Select Date
-              </h3>
-              {/* Month Selector */}
+              <h3 className="text-lg font-bold text-gray-900 mb-4">Select Date</h3>
               <div className="mb-4">
                 <label
                   htmlFor="month"
@@ -112,8 +139,6 @@ const TutorProfile: React.FC = () => {
                   ))}
                 </select>
               </div>
-
-              {/* Calendar */}
               <div className="bg-gray-50 p-4 rounded-lg shadow-inner">
                 <div className="grid grid-cols-7 gap-2 text-center">
                   {Array.from({ length: daysInMonth }, (_, i) => (
@@ -139,66 +164,137 @@ const TutorProfile: React.FC = () => {
               )}
             </div>
 
+            {/* Course Dropdown */}
             <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Payment Plan</h3>
-              <div className="flex space-x-4">
-                <button className="w-1/3 px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-lg shadow hover:bg-blue-600">
-                  Per Session
-                </button>
-                <button className="w-1/3 px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-lg shadow hover:bg-blue-600">
-                  Weekly Package
-                </button>
-                <button className="w-1/3 px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-lg shadow hover:bg-blue-600">
-                  Monthly Package
-                </button>
-              </div>
+              <label
+                htmlFor="course"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Select Course
+              </label>
+              <select
+                id="course"
+                value={selectedCourse || ""}
+                onChange={(e) => {
+                  setSelectedCourse(e.target.value as keyof typeof courses);
+                  setSelectedTopic(null); // Reset topic when course changes
+                }}
+                className="w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+              >
+                <option value="" disabled>
+                  Choose a course
+                </option>
+                {Object.keys(courses).map((course) => (
+                  <option key={course} value={course}>
+                    {course}
+                  </option>
+                ))}
+              </select>
             </div>
 
-            <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Reviews</h3>
-              <div className="space-y-4">
-                {[
-                  {
-                    name: "John K.",
-                    feedback:
-                      "The tutor made advanced calculus feel approachable and easy to understand. I’ve gained so much confidence in my math skills!",
-                    photo: "https://via.placeholder.com/50",
-                  },
-                  {
-                    name: "Emmanuel O.",
-                    feedback:
-                      "The tutor takes the time to ensure you truly understand each topic, whether it’s math or marketing. I couldn’t have asked for a better teacher!",
-                    photo: "https://via.placeholder.com/50",
-                  },
-                ].map((review, idx) => (
-                  <div
-                    key={idx}
-                    className="bg-gray-100 p-4 rounded-lg shadow-inner flex space-x-4"
-                  >
-                    <img
-                      src={review.photo}
-                      alt={`${review.name}'s profile`}
-                      className="w-10 h-10 rounded-full"
-                    />
-                    <div>
-                      <p className="text-sm font-semibold text-gray-900">
-                        {review.name}
-                      </p>
-                      <p className="text-sm text-gray-600">{review.feedback}</p>
-                    </div>
-                  </div>
-                ))}
+            {/* Topic Dropdown */}
+            {selectedCourse && (
+              <div>
+                <label
+                  htmlFor="topic"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Select Topic
+                </label>
+                <select
+                  id="topic"
+                  value={selectedTopic || ""}
+                  onChange={(e) => setSelectedTopic(e.target.value)}
+                  className="w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+                >
+                  <option value="" disabled>
+                    Choose a topic
+                  </option>
+                  {courses[selectedCourse]?.map((topic) => (
+                    <option key={topic} value={topic}>
+                      {topic}
+                    </option>
+                  ))}
+                </select>
               </div>
+            )}
+
+            {/* Location Input */}
+            <div>
+              <label
+                htmlFor="location"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Physical Class Location (Google Maps or Address)
+              </label>
+              <input
+                id="location"
+                type="text"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                placeholder="Enter address or Google Maps link"
+                className="w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+              />
             </div>
+
+            {/* Time Input */}
+            <div>
+              <label
+                htmlFor="time"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Select Time
+              </label>
+              <input
+                id="time"
+                type="time"
+                value={time}
+                onChange={(e) => setTime(e.target.value)}
+                className="w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+              />
+            </div>
+
+            {/* Additional Details */}
+            <div>
+              <label
+                htmlFor="details"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Additional Details
+              </label>
+              <textarea
+                id="details"
+                value={additionalDetails}
+                onChange={(e) => setAdditionalDetails(e.target.value)}
+                placeholder="Provide any additional details"
+                className="w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+              ></textarea>
+            </div>
+
+            {/* Booking Button */}
+            <button
+              onClick={handleBooking}
+              className="w-full px-4 py-2 bg-blue-600 text-white text-lg font-medium rounded-lg shadow hover:bg-blue-700"
+            >
+              Submit Booking
+            </button>
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-8">
-          <button className="px-6 py-3 bg-blue-600 text-white text-lg font-medium rounded-lg shadow hover:bg-blue-700">
-            Book a Session
-          </button>
-        </div>
+        {/* Booking Details */}
+        {bookingDetails && (
+          <div className="mt-8 bg-gray-100 p-4 rounded-lg shadow-inner">
+            <h3 className="text-lg font-bold text-gray-900 mb-2">
+              Booking Details
+            </h3>
+            <p>Date: {bookingDetails.date}</p>
+            <p>Location: {bookingDetails.address}</p>
+            <p>Time: {bookingDetails.time}</p>
+            <p>Course: {bookingDetails.course}</p>
+            <p>Topic: {bookingDetails.topic}</p>
+            <p>Additional Details: {bookingDetails.additionalDetails}</p>
+          </div>
+        )}
       </div>
     </div>
   );
