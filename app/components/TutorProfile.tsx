@@ -37,7 +37,9 @@ const TutorProfile: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState<number | null>(null);
   const [selectedMonth, setSelectedMonth] = useState<number>(new Date().getMonth());
   const [selectedYear] = useState<number>(new Date().getFullYear());
+  const [classType, setClassType] = useState<string>("physical"); // Default to physical class
   const [address, setAddress] = useState<string>("");
+  const [onlinePlatform, setOnlinePlatform] = useState<string | null>(null);
   const [time, setTime] = useState<string>("");
   const [selectedCourse, setSelectedCourse] = useState<keyof typeof courses | null>(null);
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
@@ -54,18 +56,27 @@ const TutorProfile: React.FC = () => {
   };
 
   const handleBooking = () => {
-    if (!selectedDate || !address || !time || !selectedCourse || !selectedTopic) {
+    if (
+      !selectedDate ||
+      !time ||
+      !selectedCourse ||
+      !selectedTopic ||
+      (classType === "physical" && !address) ||
+      (classType === "online" && !onlinePlatform)
+    ) {
       alert("Please fill in all fields to complete the booking.");
       return;
     }
 
     const bookingInfo = {
       date: `${months[selectedMonth]} ${selectedDate}, ${selectedYear}`,
-      address,
       time,
       course: selectedCourse,
       topic: selectedTopic,
       additionalDetails,
+      ...(classType === "physical"
+        ? { location: address }
+        : { platform: onlinePlatform }),
     };
 
     setBookingDetails(bookingInfo);
@@ -130,7 +141,7 @@ const TutorProfile: React.FC = () => {
                   id="month"
                   value={selectedMonth}
                   onChange={handleMonthChange}
-                  className="w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+                  className="w-full p-2 border border-gray-300 rounded-lg shadow-sm bg-blue-50"
                 >
                   {months.map((month, index) => (
                     <option key={index} value={index}>
@@ -164,6 +175,85 @@ const TutorProfile: React.FC = () => {
               )}
             </div>
 
+            {/* Class Type */}
+            <div>
+              <label
+                htmlFor="classType"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Class Type
+              </label>
+              <select
+                id="classType"
+                value={classType}
+                onChange={(e) => setClassType(e.target.value)}
+                className="w-full p-2 border border-gray-300 rounded-lg shadow-sm bg-blue-50"
+              >
+                <option value="physical">Physical Class</option>
+                <option value="online">Online Class</option>
+              </select>
+            </div>
+
+            {/* Location or Online Platform */}
+            {classType === "physical" && (
+              <div>
+                <label
+                  htmlFor="location"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Physical Class Location (Address)
+                </label>
+                <input
+                  id="location"
+                  type="text"
+                  value={address}
+                  onChange={(e) => setAddress(e.target.value)}
+                  placeholder="Enter physical location"
+                  className="w-full p-2 border border-gray-300 rounded-lg shadow-sm bg-blue-50"
+                />
+              </div>
+            )}
+            {classType === "online" && (
+              <div>
+                <label
+                  htmlFor="onlinePlatform"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Online Platform
+                </label>
+                <select
+                  id="onlinePlatform"
+                  value={onlinePlatform || ""}
+                  onChange={(e) => setOnlinePlatform(e.target.value)}
+                  className="w-full p-2 border border-gray-300 rounded-lg shadow-sm bg-blue-50"
+                >
+                  <option value="" disabled>
+                    Select a platform
+                  </option>
+                  <option value="Google Meet">Google Meet</option>
+                  <option value="Zoom">Zoom</option>
+                  <option value="Microsoft Teams">Microsoft Teams</option>
+                </select>
+              </div>
+            )}
+
+            {/* Time Input */}
+            <div>
+              <label
+                htmlFor="time"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Select Time
+              </label>
+              <input
+                id="time"
+                type="time"
+                value={time}
+                onChange={(e) => setTime(e.target.value)}
+                className="w-full p-2 border border-gray-300 rounded-lg shadow-sm bg-blue-50"
+              />
+            </div>
+
             {/* Course Dropdown */}
             <div>
               <label
@@ -179,7 +269,7 @@ const TutorProfile: React.FC = () => {
                   setSelectedCourse(e.target.value as keyof typeof courses);
                   setSelectedTopic(null); // Reset topic when course changes
                 }}
-                className="w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+                className="w-full p-2 border border-gray-300 rounded-lg shadow-sm bg-blue-50"
               >
                 <option value="" disabled>
                   Choose a course
@@ -205,7 +295,7 @@ const TutorProfile: React.FC = () => {
                   id="topic"
                   value={selectedTopic || ""}
                   onChange={(e) => setSelectedTopic(e.target.value)}
-                  className="w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+                  className="w-full p-2 border border-gray-300 rounded-lg shadow-sm bg-blue-50"
                 >
                   <option value="" disabled>
                     Choose a topic
@@ -218,41 +308,6 @@ const TutorProfile: React.FC = () => {
                 </select>
               </div>
             )}
-
-            {/* Location Input */}
-            <div>
-              <label
-                htmlFor="location"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Physical Class Location (Google Maps or Address)
-              </label>
-              <input
-                id="location"
-                type="text"
-                value={address}
-                onChange={(e) => setAddress(e.target.value)}
-                placeholder="Enter address or Google Maps link"
-                className="w-full p-2 border border-gray-300 rounded-lg shadow-sm"
-              />
-            </div>
-
-            {/* Time Input */}
-            <div>
-              <label
-                htmlFor="time"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Select Time
-              </label>
-              <input
-                id="time"
-                type="time"
-                value={time}
-                onChange={(e) => setTime(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded-lg shadow-sm"
-              />
-            </div>
 
             {/* Additional Details */}
             <div>
@@ -267,7 +322,7 @@ const TutorProfile: React.FC = () => {
                 value={additionalDetails}
                 onChange={(e) => setAdditionalDetails(e.target.value)}
                 placeholder="Provide any additional details"
-                className="w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+                className="w-full p-2 border border-gray-300 rounded-lg shadow-sm bg-blue-50"
               ></textarea>
             </div>
 
@@ -288,10 +343,11 @@ const TutorProfile: React.FC = () => {
               Booking Details
             </h3>
             <p>Date: {bookingDetails.date}</p>
-            <p>Location: {bookingDetails.address}</p>
             <p>Time: {bookingDetails.time}</p>
             <p>Course: {bookingDetails.course}</p>
             <p>Topic: {bookingDetails.topic}</p>
+            {classType === "physical" && <p>Location: {bookingDetails.location}</p>}
+            {classType === "online" && <p>Platform: {bookingDetails.platform}</p>}
             <p>Additional Details: {bookingDetails.additionalDetails}</p>
           </div>
         )}
