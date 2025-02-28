@@ -58,3 +58,6 @@ body {
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
 }
+.new{
+  background-color: pink;
+}
