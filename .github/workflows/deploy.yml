@@ -31,7 +31,7 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cdcd education_platform  # adjust to your app directory on EC2
+            cd education_platform  # adjust to your app directory on EC2
             git pull origin main
             npm install
             pm2 restart all || pm2 start app.js --name nextjs-app
