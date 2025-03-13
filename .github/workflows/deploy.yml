@@ -1,4 +1,40 @@
-name: Deploy to EC2
+name: Deploy On EC2
+
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build App (if applicable)
+        run: npm run build
+
+      - name: Deploy to EC2 via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cdcd education_platform  # adjust to your app directory on EC2
+            git pull origin main
+            npm install
+            pm2 restart all || pm2 start app.js --name nextjs-app
