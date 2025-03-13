@@ -13,7 +13,7 @@ const Hero = () => {
 {/* Left Section */}
 <div className="order-2 md:order-1">
   <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-4">
-    Yoursssss Learning <span className="text-blue-600">Journey</span> Starts with
+    Yourssssss Learning <span className="text-blue-600">Journey</span> Starts with
     <br />
     <span className="text-blue-600">Here</span>
   </h1>
