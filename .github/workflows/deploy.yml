@@ -34,4 +34,5 @@ jobs:
             cd education_platform  # adjust to your app directory on EC2
             git pull origin main
             npm install
+            npm run build
             pm2 restart all || pm2 start app.js --name nextjs-app
