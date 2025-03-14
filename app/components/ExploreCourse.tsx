@@ -59,7 +59,7 @@ export default function ExploreCourse() {
                   <div className="md:shrink-0">
                     <img
                       className="h-48 w-full object-cover rounded-xl"
-                      src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"
+                      src="https://cdn4.vectorstock.com/i/1000x1000/18/58/color-silhouette-cartoon-half-body-faceless-man-vector-15091858.jpg"
                       alt="Mountain"
                     />
                   </div>
@@ -159,7 +159,7 @@ export default function ExploreCourse() {
                   <div className="md:shrink-0">
                     <img
                       className="h-48 w-full object-cover rounded-xl"
-                      src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"
+                      src="https://cdn4.vectorstock.com/i/1000x1000/18/58/color-silhouette-cartoon-half-body-faceless-man-vector-15091858.jpg"
                       alt="Mountain"
                     />
                   </div>
