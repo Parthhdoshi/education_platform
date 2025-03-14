@@ -4,7 +4,7 @@ const Course = () => {
     return (
       <div>
         {/* Course Categories */}
-        <div className="flex justify-center gap-10">
+        <div className="flex flex-wrap justify-center gap-10">
           {["All Courses", "Business", "Science & Technology", "Arts & Humanities", "Health"].map(
             (category, index) => (
               <button
