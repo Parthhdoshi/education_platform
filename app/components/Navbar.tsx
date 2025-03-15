@@ -1,4 +1,4 @@
-"use client";
+"use client";{/*started by sunny*/}
 
 import { useState } from "react";
 
@@ -15,22 +15,22 @@ const Navbar = () => {
         {/* Navigation Links */}
         <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
           <li>
-            <a href="#" className="hover:text-blue-600 transition duration-300">
+            <a href="/#" className="hover:text-blue-600 transition duration-300">
               Home
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-blue-600 transition duration-300">
+            <a href="/aboutus" className="hover:text-blue-600 transition duration-300">
               About
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-blue-600 transition duration-300">
+            <a href="/courses" className="hover:text-blue-600 transition duration-300">
               Courses
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-blue-600 transition duration-300">
+            <a href="/contactus" className="hover:text-blue-600 transition duration-300">
               Contact Us
             </a>
           </li>
@@ -111,7 +111,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/aboutus"
                     className="hover:text-blue-600 transition duration-300"
                   >
                     About
@@ -119,7 +119,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/courses"
                     className="hover:text-blue-600 transition duration-300"
                   >
                     Courses
@@ -127,7 +127,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="contactus"
                     className="hover:text-blue-600 transition duration-300"
                   >
                     Contact Us
@@ -143,3 +143,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+{/*ended by sunny*/}
