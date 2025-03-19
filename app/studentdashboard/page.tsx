@@ -84,12 +84,12 @@ export default function StudentDashboard() {
                     <Image src="" alt="Profile" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium">John Doe</p>
+                    <p className="text-sm font-medium">sunny developer</p>
                     <p className="text-xs text-gray-500">Student</p>
                   </div>
                 </div>
               </div>
-            </div>
+            </div> 
             
             {/* Welcome Text */}
             <div className="p-4 sm:p-6 md:p-10 pb-6">
