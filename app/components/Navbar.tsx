@@ -15,22 +15,22 @@ const Navbar = () => {
         {/* Navigation Links */}
         <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
           <li>
-            <a href="#" className="hover:text-blue-600 transition duration-300">
+            <a href="/#" className="hover:text-blue-600 transition duration-300">
               Home
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-blue-600 transition duration-300">
+            <a href="/aboutus" className="hover:text-blue-600 transition duration-300">
               About
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-blue-600 transition duration-300">
+            <a href="/courses" className="hover:text-blue-600 transition duration-300">
               Courses
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-blue-600 transition duration-300">
+            <a href="/aboutus" className="hover:text-blue-600 transition duration-300">
               Contact Us
             </a>
           </li>
@@ -39,13 +39,13 @@ const Navbar = () => {
         {/* Buttons */}
         <div className="hidden md:flex space-x-4 items-center">
           <a
-            href="#"
+            href="/signin#signup"
             className="text-blue-600 font-medium hover:text-blue-800 transition duration-300"
           >
             Sign up
           </a>
           <a
-            href="#"
+            href="/signin#signin"
             className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300"
           >
             Log in
@@ -103,7 +103,7 @@ const Navbar = () => {
               <ul className="space-y-4 text-gray-700 font-medium">
                 <li>
                   <a
-                    href="#"
+                    href="/"
                     className="hover:text-blue-600 transition duration-300"
                   >
                     Home
@@ -111,7 +111,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/about"
                     className="hover:text-blue-600 transition duration-300"
                   >
                     About
@@ -119,7 +119,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/courses"
                     className="hover:text-blue-600 transition duration-300"
                   >
                     Courses
@@ -127,7 +127,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/contactus"
                     className="hover:text-blue-600 transition duration-300"
                   >
                     Contact Us

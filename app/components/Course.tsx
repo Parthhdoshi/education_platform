@@ -28,19 +28,19 @@ const Course = () => {
               title: "Introduction to Public Health",
               description:
                 "Explore the basics of public health, including strategies for well-being.",
-              img: "https://assets.manutd.com/AssetPicker/images/0/0/20/87/1333066/Player_Profile_Kobee_Mainoo1719482688199.jpg",
+              img: "https://th.bing.com/th/id/OIP.m09QD_mq10we7EC5G7ORAgHaE5?w=271&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
             },
             {
               title: "Creative Writing Workshop",
               description:
                 "Master the art of storytelling, poetry, and other forms of creative writing.",
-              img: "https://via.placeholder.com/300x200",
+              img: "https://th.bing.com/th/id/OIP.leDvRKEwWLP16MFtVHXoWAHaEi?w=244&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
             },
             {
               title: "Basics of Coding: Python for Beginners",
               description:
                 "Start your journey in programming with easy-to-follow Python lessons.",
-              img: "https://via.placeholder.com/300x200",
+              img: "https://wallpapers.com/images/hd/coding-background-9izlympnd0ovmpli.jpg",
             },
           ].map((course, index) => (
             <div

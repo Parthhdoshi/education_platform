@@ -6,7 +6,7 @@ const Certifications = () => {
       title: "Financial Literacy 101",
       description:
         "Understand budgeting, saving, and investing to manage personal or business finances.",
-      img: "https://via.placeholder.com/300",
+      img: "https://www.kreditbee.in/blog/content/images/2023/12/shutterstock_2195605515-min.jpg",
       rating: 4,
       progress: 50,
     },
@@ -14,7 +14,7 @@ const Certifications = () => {
       title: "Fundamentals of Data Science",
       description:
         "Understand data analysis, visualization, and the role of data in decision-making.",
-      img: "https://via.placeholder.com/300",
+      img: "https://th.bing.com/th/id/OIP.TBbRWRsrH6fN7c05iI2pDgHaDM?rs=1&pid=ImgDetMain",
       rating: 5,
       progress: 30,
     },
@@ -22,7 +22,7 @@ const Certifications = () => {
       title: "Nutrition and Wellness Essentials",
       description:
         "Learn about balanced diets, food nutrients, and how to maintain a healthy lifestyle.",
-      img: "https://via.placeholder.com/300",
+      img: "https://th.bing.com/th/id/OIP.lu4EC8oiJVzzZ2mjlsRrngHaFy?w=960&h=750&rs=1&pid=ImgDetMain",
       rating: 5,
       progress: 85,
     },
@@ -129,7 +129,7 @@ const Certifications = () => {
               {/* Tutor Info */}
               <div className="flex items-center gap-4">
                 <img
-                  src="https://via.placeholder.com/40"
+                  src="https://cdn4.vectorstock.com/i/1000x1000/18/58/color-silhouette-cartoon-half-body-faceless-man-vector-15091858.jpg"
                   alt={tutor.name}
                   className="w-10 h-10 rounded-full"
                 />
