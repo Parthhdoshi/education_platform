@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+  }
+}
+
 @font-face { font-family: 'GeistSans'; src: url('./fonts/GeistVF.woff') format('woff'); } 
 @font-face { font-family: 'GeistMono'; src: url('./fonts/GeistMonoVF.woff') format('woff'); } 
 
@@ -57,4 +68,4 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
-}
+} 
