@@ -7,7 +7,7 @@ const TutorList = () => {
       expertise: "Digital Marketing and Mathematics",
       availability: "Mondays, Thursdays, and Fridays",
       price: "£12-£20/hour",
-      img: "https://via.placeholder.com/100",
+      img: "https://cdn4.vectorstock.com/i/1000x1000/18/58/color-silhouette-cartoon-half-body-faceless-man-vector-15091858.jpg",
       rating: 4, // Change this value to dynamically set the rating
     },
     {
@@ -15,7 +15,7 @@ const TutorList = () => {
       expertise: "English Literature and History",
       availability: "Tuesdays and Saturdays",
       price: "£15-£25/hour",
-      img: "https://via.placeholder.com/100",
+      img: "https://i.pinimg.com/originals/2e/dd/02/2edd02160b51797f7adb807a79d96d36.jpg",
       rating: 5,
     },
     {
@@ -23,7 +23,7 @@ const TutorList = () => {
       expertise: "Physics and Chemistry",
       availability: "Weekends only",
       price: "£18-£30/hour",
-      img: "https://via.placeholder.com/100",
+      img: "https://c8.alamy.com/comp/R2NNR8/man-profile-smiling-cartoon-vector-illustration-graphic-design-R2NNR8.jpg",
       rating: 3,
     },
   ];
