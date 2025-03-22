@@ -1,4 +1,4 @@
-'use client';
+'use client';/*started bysadashiv*/
 
 import React from 'react';
 import Image from 'next/image';
@@ -27,15 +27,13 @@ const CourseCreatorSupport = () => {
           minimalisticlearning2020@gmail.com
         </a>
       </p>
-      <div className="mt-6">
-        <Image
+      <Image
           src="/mnt/data/image.png"
           alt="Envelope"
           width={150}
           height={150}
           className="rounded-lg shadow-lg"
         />
-      </div>
     </section>
   );
 };
@@ -51,7 +49,7 @@ const Page = () => {
         {/* Search Bar */}
         <SearchBarCourse />
 
-        /* Course Component */
+        {/* Course Component */}
         <div>
           <TutorList />
           <Course />
@@ -69,4 +67,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Page;/*ended by sadashiv*/

@@ -1,4 +1,4 @@
-"use client";
+"use client";/*started by sadashiv*/
 import React, { useState } from "react";
 import TutorProfile from "../components/TutorProfile";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
@@ -267,4 +267,4 @@ const Footer = () => {
   );
 };
 
-export default Page;
+export default Page;/*ended by sadashiv*/
