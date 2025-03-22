@@ -5,7 +5,7 @@ import { useState } from "react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-[#daf0ff] py-4 px-6">
+    <nav className="bg-[#BFDBFE] py-4 px-6">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-blue-600 font-semibold text-lg md:text-xl">
@@ -25,20 +25,31 @@ const Navbar = () => {
             </a>
           </li>
           <li>
+<<<<<<< HEAD
             <a href="/courses" className="hover:text-blue-600 transition duration-300">
+=======
+            <a href="/course" className="hover:text-blue-600 transition duration-300">
+>>>>>>> 2b7091864aada4f1dcbc3e78d561e1e5b415e4e3
               Courses
             </a>
           </li>
+           {/* Mahesh start */}
           <li>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <a href="/contactus" className="hover:text-blue-600 transition duration-300">
 =======
             <a href="/aboutus" className="hover:text-blue-600 transition duration-300">
 >>>>>>> 6cea5ae56d2b9256c147b16792d07250fe84fa08
+=======
+            <a href="/Contactus" className="hover:text-blue-600 transition duration-300">
+>>>>>>> 2b7091864aada4f1dcbc3e78d561e1e5b415e4e3
               Contact Us
             </a>
           </li>
+          {/* Mahesh end */}
         </ul>
+      
 
         {/* Buttons */}
         <div className="hidden md:flex space-x-4 items-center">
@@ -144,10 +155,14 @@ const Navbar = () => {
                 <li>
                   <a
 <<<<<<< HEAD
+<<<<<<< HEAD
                     href="contactus"
 =======
                     href="/contactus"
 >>>>>>> 6cea5ae56d2b9256c147b16792d07250fe84fa08
+=======
+                    href="/Contactus"
+>>>>>>> 2b7091864aada4f1dcbc3e78d561e1e5b415e4e3
                     className="hover:text-blue-600 transition duration-300"
                   >
                     Contact Us
