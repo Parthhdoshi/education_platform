@@ -1,5 +1,4 @@
 "use client"; // Required for React hooks in Next.js
-
 import React, { useState } from "react";
 
 const Course = () => {
@@ -66,7 +65,7 @@ const Course = () => {
                   {/* Star Rating */}
                   <div className="flex">
                     {Array.from({ length: 5 }, (_, i) => (
-                      <span key={i} className={i < course.rating ? "text-yellow-500" : "text-gray-300"}>
+                      <span key={i} className={i < course.ratingn? "text-yellow-500" : "text-gray-300"}>
                         ★
                       </span>
                     ))}
@@ -84,7 +83,7 @@ const Course = () => {
           <p className="text-gray-500 text-center col-span-3">No courses available in this category.</p>
         )
       </div>
-      </div>
+    </div>
       );
-    );
+    };
 export default Course;
