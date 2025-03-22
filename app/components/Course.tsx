@@ -82,11 +82,9 @@ const Course = () => {
           ))
         ) : (
           <p className="text-gray-500 text-center col-span-3">No courses available in this category.</p>
-        )}
+        )
       </div>
       </div>
-    </div>
-  );
-};
-
+      );
+    );
 export default Course;
