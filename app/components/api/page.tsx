@@ -18,7 +18,7 @@ const JewelryStore: React.FC = () => {
     axios
       .get("https://fakestoreapi.com/products/category/jewelery")
       .then((res) => setProducts(res.data))
-      .catch((err) => console.error("Error fetching jewelry products:", err));
+      .catch((error) => console.error("Error fetching jewelry products:", error));
   }, []);
 
   return (
