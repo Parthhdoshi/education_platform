@@ -2,13 +2,7 @@ import React from 'react'
 
 const SearchBarCourse = () => {
   return (
-<<<<<<< HEAD
 <div className="bg-blue-50">
-=======
-
-   
-    <div className="bg-blue-200">
->>>>>>> 2b7091864aada4f1dcbc3e78d561e1e5b415e4e3
       {/* User Info */}
       <div className="flex justify-end items-center p-4 gap-4 bg-blue-200">
         <span className="text-gray-600 text-lg">John Doe</span>
@@ -32,7 +26,6 @@ const SearchBarCourse = () => {
         </div>
 
         {/* Search Bar */}
-<<<<<<< HEAD
         <div className="flex justify-center items-center gap-4 mb-10">
       <input
         type="text"
@@ -44,23 +37,6 @@ const SearchBarCourse = () => {
       </button>
     </div>
     </main>
-=======
-        <div className="relative w-full flex justify-center items-center mb-10">
-  {/* Search Bar Centered */}
-  <input
-    type="text"
-    placeholder="Search Courses"
-    className="flex flex-wrap w-1/2 px-6 py-2 border border-gray-400 rounded-lg placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-  />
-
-  {/* Filter Button at Right Mid Corner */}
-  <button className=" flex flex-wrap px-2 py-2 bg-blue-200 border border-gray-400 rounded-lg hover:bg-gray-200">
-    Filter by ▼
-  </button>
-</div>
-
-      </main>
->>>>>>> 2b7091864aada4f1dcbc3e78d561e1e5b415e4e3
     </div>
         );
       }
