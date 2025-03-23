@@ -21,11 +21,7 @@ const Footer = () => {
           <h2 className="text-lg font-semibold mb-4">About us</h2>
           <ul className="space-y-2 text-gray-200">
             <li>
-<<<<<<< HEAD
               <a href="/aboutus" className="hover:text-gray-50 transition">
-=======
-              <a href="D:\intern main\education_platform\app\components\Contactus.tsx" className="hover:text-gray-50 transition">
->>>>>>> 2b7091864aada4f1dcbc3e78d561e1e5b415e4e3
                 Contact Us
               </a>
             </li>

@@ -25,25 +25,16 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-<<<<<<< HEAD
             <a href="/courses" className="hover:text-blue-600 transition duration-300">
-=======
-            <a href="/course" className="hover:text-blue-600 transition duration-300">
->>>>>>> 2b7091864aada4f1dcbc3e78d561e1e5b415e4e3
               Courses
             </a>
           </li>
            {/* Mahesh start */}
           <li>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             <a href="/contactus" className="hover:text-blue-600 transition duration-300">
-=======
-            <a href="/aboutus" className="hover:text-blue-600 transition duration-300">
->>>>>>> 6cea5ae56d2b9256c147b16792d07250fe84fa08
-=======
-            <a href="/Contactus" className="hover:text-blue-600 transition duration-300">
->>>>>>> 2b7091864aada4f1dcbc3e78d561e1e5b415e4e3
+
+            
               Contact Us
             </a>
           </li>
@@ -54,21 +45,13 @@ const Navbar = () => {
         {/* Buttons */}
         <div className="hidden md:flex space-x-4 items-center">
           <a
-<<<<<<< HEAD
             href="http://localhost:3000/signin#signup"
-=======
-            href="/signin#signup"
->>>>>>> 6cea5ae56d2b9256c147b16792d07250fe84fa08
             className="text-blue-600 font-medium hover:text-blue-800 transition duration-300"
           >
             Sign up
           </a>
           <a
-<<<<<<< HEAD
             href="http://localhost:3000/signin"
-=======
-            href="/signin#signin"
->>>>>>> 6cea5ae56d2b9256c147b16792d07250fe84fa08
             className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300"
           >
             Log in
@@ -134,11 +117,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-<<<<<<< HEAD
                     href="/aboutus"
-=======
-                    href="/about"
->>>>>>> 6cea5ae56d2b9256c147b16792d07250fe84fa08
                     className="hover:text-blue-600 transition duration-300"
                   >
                     About
@@ -154,15 +133,9 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                     href="contactus"
-=======
-                    href="/contactus"
->>>>>>> 6cea5ae56d2b9256c147b16792d07250fe84fa08
-=======
-                    href="/Contactus"
->>>>>>> 2b7091864aada4f1dcbc3e78d561e1e5b415e4e3
+
                     className="hover:text-blue-600 transition duration-300"
                   >
                     Contact Us
