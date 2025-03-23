@@ -1,4 +1,4 @@
-"use client";/*started by sadashiv*/
+"use client";
 import React, { useState } from "react";
 import TutorProfile from "../components/TutorProfile";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
@@ -182,7 +182,89 @@ const Page = () => {
 
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default page;
+const Footer = () => {
+  return (
+    <footer className="relative bg-blue-700 text-white pt-16 pb-8">
+      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
+        <svg className="relative block h-16 w-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        
+        </svg>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 mt-8">
+        <div>
+          <h2 className="text-lg font-semibold mb-4">About us</h2>
+          <ul className="space-y-2 text-gray-200">
+            <li>
+              <a href="/contact" className="hover:text-gray-50 transition">
+                Contact Us
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-gray-50 transition">
+                Testimonials
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="text-lg font-semibold mb-4">Courses</h2>
+          <ul className="space-y-2 text-gray-200">
+            <li>
+              <a href="#" className="hover:text-gray-50 transition">
+                Help and Support
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-gray-50 transition">
+                Terms and Conditions
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="text-lg font-semibold mb-4">Terms</h2>
+          <ul className="space-y-2 text-gray-200">
+            <li>
+              <a href="#" className="hover:text-gray-50 transition">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-gray-50 transition">
+                Cookie settings
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-blue-600 my-8"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between">
+        <div className="mb-4 sm:mb-0">
+          <span className="text-lg sm:text-xl font-semibold tracking-wider text-center sm:text-left block">MINIMALISTIC LEARNING</span>
+        </div>
+
+        <div className="flex space-x-6">
+          <a href="#" className="hover:text-gray-300 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18 2H6C3.8 2 2 3.8 2 6v12c0 2.2 1.8 4 4 4h6V14H9v-4h3V7.7C12 5 13.7 3.5 16 3.5c.8 0 1.5.1 1.7.1v3h-1.9c-1.5 0-1.8.7-1.8 1.7V10h3l-.5 4h-2.5v8h4c2.2 0 4-1.8 4-4V6c0-2.2-1.8-4-4-4z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div className="text-center text-gray-200 text-sm mt-6">
+        © 2024 Minimalistic Learning. All rights reserved.
+      </div>
+    </footer>
+  );
+};
+
+export default Page;
