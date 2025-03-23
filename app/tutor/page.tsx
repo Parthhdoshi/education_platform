@@ -183,10 +183,6 @@ const Page = () => {
       <Footer />
     </div>
   )
-<<<<<<< HEAD
 }
 
 export default page;
-=======
-}
->>>>>>> 2b7091864aada4f1dcbc3e78d561e1e5b415e4e3
