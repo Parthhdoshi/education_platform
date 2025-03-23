@@ -40,5 +40,3 @@ const UsersList: React.FC = () => {
     </div>
   );
 };
-
-export default UsersList;
