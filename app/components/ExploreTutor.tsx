@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const ExploreTutor = () => {
@@ -23,13 +24,13 @@ const ExploreTutor = () => {
       <div className="relative">
         <div className="absolute top-0 right-0 text-sm text-gray-600 flex items-center gap-2">
           <span>John Doe</span>
-          <img
+          <Image
             src="https://via.placeholder.com/40"
             alt="User Avatar"
             className="w-10 h-10 rounded-full"
           />
         </div>
-        <img
+        <Image
           src="https://via.placeholder.com/300x300.png?text=Student"
           alt="Student"
           className="rounded-full w-64 h-64 object-cover shadow-lg"

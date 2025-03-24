@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const Course = () => {
@@ -47,7 +48,7 @@ const Course = () => {
               key={index}
               className="bg-white rounded-lg shadow-lg overflow-hidden"
             >
-              <img
+              <Image
                 src={course.img}
                 alt={course.title}
                 className="w-full h-48 object-cover"

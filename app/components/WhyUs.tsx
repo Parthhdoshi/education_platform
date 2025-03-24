@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function WhyUs() {
   return (
     <>
@@ -5,7 +7,7 @@ export default function WhyUs() {
         <div className="max-w-6xl flex flex-col md:flex-row items-center h-1/2 p-8 mb-10">
           {/* Left Section - Image */}
           <div className="w-full md:w-1/2 mb-8 md:mb-0 flex justify-center">
-            <img
+            <Image
               src="/images/pana.png"
               alt="Learning Illustration"
               className="rounded-lg"
@@ -49,7 +51,7 @@ export default function WhyUs() {
 
           {/* Right Section - Image */}
           <div className="w-full md:w-1/2 flex justify-center">
-            <img
+            <Image
               src="/images/pana (1).png"
               alt="Learn at Your Own Pace"
               className="rounded-lg"
@@ -63,7 +65,7 @@ export default function WhyUs() {
         <div className="max-w-6xl flex flex-col md:flex-row items-center gap-8">
           {/* Left Section - Image */}
           <div className="w-full md:w-1/2 flex justify-center">
-            <img
+            <Image
               src="/images/pana (2).png"
               alt="Certificates Illustration"
               className="rounded-lg"
@@ -104,7 +106,7 @@ export default function WhyUs() {
 
           {/* Right Section - Image */}
           <div className="w-full md:w-1/2 flex justify-center">
-            <img
+            <Image
               src="/images/pana (3).png"
               alt="Experts Illustration"
               className="rounded-lg"

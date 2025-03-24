@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Certifications = () => {
@@ -62,7 +63,7 @@ const Certifications = () => {
               key={index}
               className="bg-white rounded-lg shadow-lg overflow-hidden"
             >
-              <img
+              <Image
                 src={cert.img}
                 alt={cert.title}
                 className="w-full h-48 object-cover"
@@ -128,7 +129,7 @@ const Certifications = () => {
             >
               {/* Tutor Info */}
               <div className="flex items-center gap-4">
-                <img
+                <Image
                   src="https://via.placeholder.com/40"
                   alt={tutor.name}
                   className="w-10 h-10 rounded-full"

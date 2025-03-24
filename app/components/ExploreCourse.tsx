@@ -5,6 +5,7 @@ import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
+import Image from "next/image";
 
 export default function ExploreCourse() {
   const [value, setValue] = React.useState("1");
@@ -53,11 +54,11 @@ export default function ExploreCourse() {
         </Box>
         <TabPanel value="1" sx={{ typography: "body1", fontWeight: "bold" }}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
-            {new Array(6).fill(0).map(() => (
-              <div className="w-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-md p-4">
+            {new Array(6).fill(0).map((item:any, index:any) => (
+              <div className="w-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-md p-4" key={index}>
                 <div className="">
                   <div className="md:shrink-0">
-                    <img
+                    <Image
                       className="h-48 w-full object-cover rounded-xl"
                       src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"
                       alt="Mountain"
@@ -153,11 +154,11 @@ export default function ExploreCourse() {
         </TabPanel>
         <TabPanel value="2" sx={{ typography: "body1", fontWeight: "bold" }}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
-            {new Array(2).fill(0).map(() => (
-              <div className="w-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-md p-4">
+            {new Array(2).fill(0).map((item:any, index:any) => (
+              <div className="w-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-md p-4" key={index}>
                 <div className="">
                   <div className="md:shrink-0">
-                    <img
+                    <Image
                       className="h-48 w-full object-cover rounded-xl"
                       src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"
                       alt="Mountain"
@@ -253,11 +254,11 @@ export default function ExploreCourse() {
         </TabPanel>
         <TabPanel value="3" sx={{ typography: "body1", fontWeight: "bold" }}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
-            {new Array(3).fill(0).map(() => (
-              <div className="w-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-md p-4">
+            {new Array(3).fill(0).map((item:any, index:any) => (
+              <div className="w-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-md p-4" key={index}>
                 <div className="">
                   <div className="md:shrink-0">
-                    <img
+                    <Image
                       className="h-48 w-full object-cover rounded-xl"
                       src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"
                       alt="Mountain"
@@ -353,11 +354,11 @@ export default function ExploreCourse() {
         </TabPanel>
         <TabPanel value="4" sx={{ typography: "body1", fontWeight: "bold" }}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
-            {new Array(4).fill(0).map(() => (
-              <div className="w-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-md p-4">
+            {new Array(4).fill(0).map((item:any, index:any) => (
+              <div className="w-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-md p-4" key={index}>
                 <div className="">
                   <div className="md:shrink-0">
-                    <img
+                    <Image
                       className="h-48 w-full object-cover rounded-xl"
                       src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"
                       alt="Mountain"
@@ -453,11 +454,11 @@ export default function ExploreCourse() {
         </TabPanel>
         <TabPanel value="5" sx={{ typography: "body1", fontWeight: "bold" }}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
-            {new Array(5).fill(0).map(() => (
-              <div className="w-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-md p-4">
+            {new Array(5).fill(0).map((item:any, index:any) => (
+              <div className="w-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-md p-4" key={index}>
                 <div className="">
                   <div className="md:shrink-0">
-                    <img
+                    <Image
                       className="h-48 w-full object-cover rounded-xl"
                       src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"
                       alt="Mountain"
