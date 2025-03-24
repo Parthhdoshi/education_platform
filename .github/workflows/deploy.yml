@@ -29,7 +29,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd education_platform  # adjust to your app directory on EC2
-            git pull origin main
-            npm install
+            git pull
+            sudo npm install
             npm run build
-            pm2 restart all || pm2 start app.js --name nextjs-app
+            pm2 restart all
