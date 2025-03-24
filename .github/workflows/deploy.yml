@@ -28,8 +28,8 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd education_platform  # adjust to your app directory on EC2
-            git pull origin main
+            cd education_platform/
+            git pull
             npm install
             npm run build
-            pm2 restart all || pm2 start app.js --name nextjs-app
+            pm2 restart all
