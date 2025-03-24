@@ -23,7 +23,7 @@ const ExploreTutor = () => {
       {/* Right Image */}
       <div className="relative">
         <div className="absolute top-0 right-0 text-sm text-gray-600 flex items-center gap-2">
-          <span>John Doe</span>
+          <span>John Does</span>
           <Image
             src="https://via.placeholder.com/40"
             alt="User Avatar"
