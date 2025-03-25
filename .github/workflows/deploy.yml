@@ -30,6 +30,6 @@ jobs:
           script: |
             cd education_platform/
             git pull
-            npm ci
+            yarn install
             yarm run build
             pm2 restart all
