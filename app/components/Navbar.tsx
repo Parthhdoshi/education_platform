@@ -1,11 +1,10 @@
 "use client";{/*started by sunny*/}
-
 import { useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-[#BFDBFE] py-4 px-6">
+    <nav className="bg-[#daf0ff] py-4 px-6">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-blue-600 font-semibold text-lg md:text-xl">
@@ -29,7 +28,6 @@ const Navbar = () => {
               Courses
             </a>
           </li>
-           {/* Mahesh start */}
           <li>
 
             <a href="/contactus" className="hover:text-blue-600 transition duration-300">
@@ -38,9 +36,7 @@ const Navbar = () => {
               Contact Us
             </a>
           </li>
-          {/* Mahesh end */}
         </ul>
-      
 
         {/* Buttons */}
         <div className="hidden md:flex space-x-4 items-center">
@@ -109,7 +105,7 @@ const Navbar = () => {
               <ul className="space-y-4 text-gray-700 font-medium">
                 <li>
                   <a
-                    href="/"
+                    href="#"
                     className="hover:text-blue-600 transition duration-300"
                   >
                     Home
