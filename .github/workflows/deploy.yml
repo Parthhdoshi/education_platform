@@ -30,6 +30,6 @@ jobs:
           script: |
             cd education_platform/
             git pull
-            pnpm install
-            pnpm build
+            npm ci
+            yarm run build
             pm2 restart all
