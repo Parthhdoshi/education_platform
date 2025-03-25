@@ -28,10 +28,10 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            rm -rf /home/ubuntu/.cache/*
-            npm cache clean --force
-            rm -rf /home/ubuntu/.pm2/logs/*
-            npm cache clean --force 
+            sudo rm -rf /home/ubuntu/.cache/*
+            sudo npm cache clean --force
+            sudo rm -rf /home/ubuntu/.pm2/logs/*
+            sudo npm cache clean --force 
             cd education_platform/
             git pull
             rm -rf node_modules yarn.lock && yarn install
