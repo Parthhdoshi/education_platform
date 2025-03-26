@@ -91,12 +91,14 @@ const AdminDashboard = () => {
 
         {/* Logout section */}
 
-        <div className="absolute -bottom-full left-4">
-          <a href="/#" className="flex items-center text-red-500">
-            <FaSignOutAlt className="mr-3 text-lg md:text-xl" />
-            Logout
-          </a>
-        </div>
+        <div className="fixed -bottom-4 flex">
+  <a 
+    href="/#" 
+    className="fixed bottom-4 flex text-red-500 hover:text-red-700 mt-4">
+    <span className="font-semibold text-lg ml-8">{'[-> '}Log out</span>
+  </a>
+</div>
+
 
       </aside>
 
@@ -164,7 +166,7 @@ const AdminDashboard = () => {
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
               <div className="relative">
                 <img 
-                  src="https://files.oaiusercontent.com/file-JsTf2TAH5UtJKHy4XPG3UH?se=2025-03-12T14%3A54%3A38Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dce57c013-0268-42e8-a586-e7a34926a94f.webp&sig=J1zw9R8B1HZSIqiNjvJoffFGtFA68ASNAhFOq15z1Zg%3D" 
+                  src="https://files.oaiusercontent.com/file-JsTf2TAH5UtJKHy4XPG3UH?se=2025-03-21T14%3A39%3A24Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dce57c013-0268-42e8-a586-e7a34926a94f.webp&sig=MVubgNHcvU%2BFb9pYu/6BlW7nhQSQjs%2BNiLU8O2PVTDw%3D" 
                   alt="Finance Course" 
                   className="w-full h-48 object-cover" 
                 />
@@ -184,7 +186,7 @@ const AdminDashboard = () => {
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
               <div className="relative">
                 <img 
-                  src="https://files.oaiusercontent.com/file-D72BNrFAEcra3TfKAhpChK?se=2025-03-12T14%3A56%3A04Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D6e08ee36-3be1-4906-873d-5618c6ddaa98.webp&sig=j/PUTpuxLABOvmrlt28XAAVxxZRlFZl2CCsqFNg7Z%2Bc%3D" 
+                  src="https://files.oaiusercontent.com/file-D72BNrFAEcra3TfKAhpChK?se=2025-03-21T14%3A39%3A24Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D6e08ee36-3be1-4906-873d-5618c6ddaa98.webp&sig=GxdTB0AGbLJa0oWMJR%2Ba/ZWKWmIJSdGphLToGFbpN%2Bw%3D" 
                   alt="Programming Course" 
                   className="w-full h-48 object-cover" 
                 />
@@ -204,7 +206,7 @@ const AdminDashboard = () => {
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
               <div className="relative">
                 <img 
-                  src="https://files.oaiusercontent.com/file-RuTA9ZPqeDJxz772uwwAK9?se=2025-03-12T14%3A57%3A22Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Ddcb445bf-9752-481c-98e6-199a816145c2.webp&sig=VBvf3MDHnTtyvC8AEEsdkeXH9VWKXQM0V4bcdM%2BvCqQ%3D" 
+                  src="https://files.oaiusercontent.com/file-RuTA9ZPqeDJxz772uwwAK9?se=2025-03-21T14%3A39%3A24Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Ddcb445bf-9752-481c-98e6-199a816145c2.webp&sig=Rc5SieK0VPWjHEfjWtUmqSsRy8Vp81q6Uadr0rvoT%2Bg%3D" 
                   alt="Fitness Course" 
                   className="w-full h-48 object-cover" 
                 />

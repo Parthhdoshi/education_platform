@@ -16,7 +16,7 @@ const AboutUs = () => {
       img: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
-      name: "Ifeoluwa Idowu",
+      name: "Manan Doshi",
       role: "User Experience and User Interface Designer.",
       img: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600",
     },

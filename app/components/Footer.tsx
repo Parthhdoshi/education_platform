@@ -10,7 +10,7 @@ const Footer = () => {
         >
           <path
             d="M0,0 C300,120 900,0 1200,120 L1200,0 L0,0 Z"
-            className="fill-[#daf0ff]"
+            className="fill-[#BFDBFE]"
           ></path>
         </svg>
       </div>
@@ -21,7 +21,7 @@ const Footer = () => {
           <h2 className="text-lg font-semibold mb-4">About us</h2>
           <ul className="space-y-2 text-gray-200">
             <li>
-              <a href="#" className="hover:text-gray-50 transition">
+              <a href="D:\intern main\education_platform\app\components\Contactus.tsx" className="hover:text-gray-50 transition">
                 Contact Us
               </a>
             </li>

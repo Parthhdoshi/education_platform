@@ -3,25 +3,23 @@ import React from 'react'
 
 const SearchBarCourse = () => {
   return (
-
-   
-    <div className="bg-blue-50 min-h-screen">
+<div className="bg-blue-50">
       {/* User Info */}
-      <div className="flex justify-end items-center p-4 gap-4 bg-blue-50">
+      <div className="flex justify-end items-center p-4 gap-4 bg-blue-200">
         <span className="text-gray-600 text-lg">John Doe</span>
-        <Image
-          src="https://via.placeholder.com/40"
+        <img
+          src="https://cdn4.vectorstock.com/i/1000x1000/18/58/color-silhouette-cartoon-half-body-faceless-man-vector-15091858.jpg"
           alt="User Avatar"
           className="w-10 h-10 rounded-full"
         />
       </div>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto p-10">
+      <main className="max-w-5xl mx-auto p-4">
         {/* Welcome Section */}
         <div className="text-center mb-10">
-          <h2 className="text-2xl font-bold text-blue-600">
-            Your Learning Journey Continues, John
+          <h2 className="text-2xl font-bold text-gray-800">
+            Learn Anytime,Anywhere 
           </h2>
           <p className="text-lg text-gray-600 mt-2">
             Learn, Grow, Succeed—Your Next Skill Starts Here.
@@ -39,16 +37,11 @@ const SearchBarCourse = () => {
         Filter by ▼
       </button>
     </div>
-
-       
-
-    
-       
-      </main>
+    </main>
     </div>
         );
       }
+
+
       
-
-
 export default SearchBarCourse
