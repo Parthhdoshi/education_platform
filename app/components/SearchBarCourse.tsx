@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 
 const SearchBarCourse = () => {
@@ -8,7 +9,7 @@ const SearchBarCourse = () => {
       {/* User Info */}
       <div className="flex justify-end items-center p-4 gap-4 bg-blue-50">
         <span className="text-gray-600 text-lg">John Doe</span>
-        <img
+        <Image
           src="https://via.placeholder.com/40"
           alt="User Avatar"
           className="w-10 h-10 rounded-full"
