@@ -40,4 +40,4 @@ const Weather: React.FC = () => {
   );
 };
 
-export default Weather;
+export default Weather;
