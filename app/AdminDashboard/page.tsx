@@ -11,7 +11,7 @@ const page = () => {
   )
 }
 
-export default page*/
+export default page*/
 
 
 "use client";
@@ -288,7 +288,7 @@ const AdminDashboard = () => {
                         textAnchor="middle" 
                         dominantBaseline="central"
                       >
-                        {`${value}%`}
+                        {${value}%}
                       </text>
                     )}
                      labelLine={false}
@@ -296,7 +296,7 @@ const AdminDashboard = () => {
                   
                     {engagementData.map((entry, index) => (
                       <Cell 
-                        key={`cell-${index}`} 
+                        key={cell-${index}} 
                         fill={entry.color}
                         stroke="none"
                       />
