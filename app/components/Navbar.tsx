@@ -1,5 +1,4 @@
 "use client";{/*started by sunny*/}
-
 import { useState } from "react";
 
 const Navbar = () => {

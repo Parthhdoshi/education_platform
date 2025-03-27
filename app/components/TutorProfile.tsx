@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState } from "react";
 
 const months = [
@@ -95,7 +96,7 @@ const TutorProfile: React.FC = () => {
           {/* Left Section - Tutor Info */}
           <div className="lg:w-2/3">
             <div className="flex items-center space-x-4 mb-6">
-              <img
+              <Image
                 src="https://via.placeholder.com/150"
                 alt="Tutor Profile"
                 className="w-20 h-20 rounded-full shadow"

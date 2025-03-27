@@ -1,6 +1,7 @@
 "use client"; {/*Added by Manan Doshi*/}
 import React, { useState, useEffect } from 'react';
 
+
 const Page = () => {
   const [currentView, setCurrentView] = useState('signin');
   const [showPassword, setShowPassword] = useState(false);
