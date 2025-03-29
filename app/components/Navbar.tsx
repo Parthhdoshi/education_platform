@@ -1,5 +1,4 @@
 "use client";{/*started by sunny*/}
-
 import { useState } from "react";
 
 const Navbar = () => {
@@ -103,7 +102,7 @@ const Navbar = () => {
               <ul className="space-y-4 text-gray-700 font-medium">
                 <li>
                   <a
-                    href="/"
+                    href="#"
                     className="hover:text-blue-600 transition duration-300"
                   >
                     Home

@@ -10,7 +10,7 @@ const Footer = () => {
         >
           <path
             d="M0,0 C300,120 900,0 1200,120 L1200,0 L0,0 Z"
-            className="fill-[#daf0ff]"
+            className="fill-[#BFDBFE]"
           ></path>
         </svg>
       </div>

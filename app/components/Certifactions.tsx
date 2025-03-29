@@ -151,7 +151,7 @@ const Certifications = () => {
                   {Array.from({ length: 5 }).map((_, starIndex) => (
                     <svg
                       key={starIndex}
-                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns="https://cdn4.vectorstock.com/i/1000x1000/18/58/color-silhouette-cartoon-half-body-faceless-man-vector-15091858.jpg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
                       className={`w-5 h-5 ${
