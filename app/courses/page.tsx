@@ -1,4 +1,4 @@
-'use client';/*started bysadashiv*/
+'use client';
 
 import React from 'react';
 import Image from 'next/image';
@@ -27,13 +27,15 @@ const CourseCreatorSupport = () => {
           minimalisticlearning2020@gmail.com
         </a>
       </p>
-      <Image
+      <div className="mt-6">
+        <Image
           src="/mnt/data/image.png"
           alt="Envelope"
           width={150}
           height={150}
           className="rounded-lg shadow-lg"
         />
+      </div>
     </section>
   );
 };
@@ -66,5 +68,4 @@ const Page = () => {
     </div>
   );
 };
-
-export default Page;/*ended by sadashiv*/
+export default Page;

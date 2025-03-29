@@ -17,7 +17,7 @@ export default page*/
 "use client";
 
 import React from 'react';
-import { FaThLarge, FaUsers, FaCreditCard, FaChartBar, FaCog, FaSignOutAlt, FaBell } from 'react-icons/fa';
+import { FaThLarge, FaUser, FaCreditCard, FaBarChart, FaCog, FaSignOut, FaBell } from 'react-icons/fa';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import TutorProfile from '../components/TutorProfile';
 
@@ -64,7 +64,7 @@ const AdminDashboard = () => {
             {/* Add other navigation items */}
             <li className="px-4 py-3">
               <a href="#" className="flex items-center text-gray-600">
-                <FaUsers className="mr-3 text-lg md:text-xl" />
+                <FaUser className="mr-3 text-lg md:text-xl" />
                 User Management
               </a>
             </li>
@@ -76,7 +76,7 @@ const AdminDashboard = () => {
             </li>
             <li className="px-4 py-3">
               <a href="#" className="flex items-center text-gray-600">
-                <FaChartBar className="mr-3 text-lg md:text-xl" />
+                <FaBarChart className="mr-3 text-lg md:text-xl" />
                 Reports
               </a>
             </li>
