@@ -53,7 +53,9 @@ const AboutUs = () => {
             <Image
               src="https://media.istockphoto.com/id/157284581/photo/road-by-night.jpg?s=612x612&w=0&k=20&c=utloT84rFRHikE2EcrnG5N-bE_R4dQEfKcgrPxGjUyY="
               alt="Journey Image"
-              className="rounded-full shadow-lg"
+              width={300}
+              height={300}
+              className="rounded-full shadow-lg object-cover"
             />
           </div>
         </div>
@@ -75,6 +77,8 @@ const AboutUs = () => {
                 <Image
                   src={member.img}
                   alt={member.name}
+                  width={400}
+                  height={300}
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-4">
