@@ -1,4 +1,6 @@
-/** @type {import('next').NextConfig} */
+import type { NextConfig } from "next";
+
+ /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
     domains: [
@@ -8,4 +10,5 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default nextConfig;   // for ESM import style
+module.exports = nextConfig; // for CommonJS require style
