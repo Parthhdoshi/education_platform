@@ -1,28 +1,12 @@
-/*import React from 'react'
-import TutorProfile from '../components/TutorProfile'
-
-const page = () => {
-  return (
-    <div>
-
-<TutorProfile/>
-
-    </div>
-  )
-}
-
-export default page*/
-
-
 "use client";
 
 import React from 'react';
-import { FaThLarge, FaUser, FaCreditCard, FaBarChart, FaCog, FaSignOut, FaBell } from 'react-icons/fa';
+import { FaThLarge, FaUser, FaCreditCard, FaCog,  FaSignOutAlt, FaBell, FaChartBar } from 'react-icons/fa';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import TutorProfile from '../components/TutorProfile';
 
 const AdminDashboard = () => {
-  // Mock data for stats
+
   const stats = [
     { number: 33, label: "Total Students", icon: "👤" },
     { number: 82, label: "Courses Sold", icon: "📚" },
@@ -30,7 +14,7 @@ const AdminDashboard = () => {
     { number: 19, label: "Students Enrolled", icon: "🧑‍🎓" },
   ];
 
-  // Updated activity log data to match image exactly
+
   const activityLog = [
     { activity: "New user registered", details: "Tutor signed up", status: "Approved", action: "View profile" },
     { activity: "New student enrolment", details: "Student enrolled in UIUX course", status: "Pending", action: "View profile" },
@@ -76,7 +60,7 @@ const AdminDashboard = () => {
             </li>
             <li className="px-4 py-3">
               <a href="#" className="flex items-center text-gray-600">
-                <FaBarChart className="mr-3 text-lg md:text-xl" />
+                <FaChartBar className="mr-3 text-lg md:text-xl" />
                 Reports
               </a>
             </li>
@@ -281,26 +265,29 @@ const AdminDashboard = () => {
                     cy="50%"
                     label={({ value, x, y }) => (
                       <text 
-                        x={x} 
-                        y={y} 
-                        fill="#000" // Set text color to black
-                        fontSize="12px"
-                        textAnchor="middle" 
-                        dominantBaseline="central"
-                      >
-                        {`${value}%`}
-                      </text>
+                      x={x} 
+                      y={y} 
+                      fill="#000"        
+                      fontSize="12px"
+                      textAnchor="middle" 
+                      dominantBaseline="central"
+                    >
+                      {`${value}%`}      
+                    </text>
+                    
+                      
                     )}
-                     labelLine={false}
+                      labelLine={false}
                   >
-                  
-                    {engagementData.map((entry, index) => (
-                      <Cell 
-                        key={`cell-${index}`} 
-                        fill={entry.color}
-                        stroke="none"
-                      />
-                    ))}
+                  {engagementData.map((entry, index) => (
+  <Cell 
+    key={`cell-${index}`}     
+    fill={entry.color}
+    stroke="none"
+  />
+))}
+
+                    
                   </Pie>
                 </PieChart>
               </ResponsiveContainer>

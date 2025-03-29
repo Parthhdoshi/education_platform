@@ -21,6 +21,7 @@
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
     "framer-motion": "^11.11.17",
+    "icons": "^1.0.0",
     "lucide-react": "^0.460.0",
     "mongoose": "^8.8.2",
     "next": "^15.0.3",

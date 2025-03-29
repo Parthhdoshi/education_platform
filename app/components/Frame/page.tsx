@@ -117,7 +117,7 @@ const LearningDashboard: React.FC = () => {
               ].map((item, index) => (
                   <div
                       key={index}
-                      className={`p-6 w-10/12 rounded-lg text-center transition-transform duration-300 ${item.isHighlighted ? 'border-4 border-blue-600 transform scale-110' : 'bg-transparent border border-blue-600'}`}>
+                      className={`p-6 w-auto rounded-lg text-center transition-transform duration-300 ${item.isHighlighted ? 'border-4 border-blue-600 transform scale-110' : 'bg-transparent border border-blue-600'}`}>
                       <h3 className="font-semibold text-lg">{item.plan}</h3>
                       <p className="text-gray-600 mt-10">{item.features}</p>
                       <p className="text-xl font-bold mt-10">{item.price}</p>
