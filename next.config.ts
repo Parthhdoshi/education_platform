@@ -1,10 +1,19 @@
-import type { NextConfig } from "next";
+// import type { NextConfig } from "next";
+
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   images: {
+//     domains: ['via.placeholder.com'], // allow the placeholder domain
+//   },
+// };
+
+// export default nextConfig;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['via.placeholder.com'], // allow the placeholder domain
+    domains: ["cdn4.vectorstock.com"], // Add the domain here
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
