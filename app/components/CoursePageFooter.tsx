@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const CoursePageFooter = () => {
@@ -21,7 +22,7 @@ const CoursePageFooter = () => {
               minimalisticlearning2024@gmail.com
             </a>
           </p>
-          <img
+          <Image
             src="https://via.placeholder.com/150"
             alt="Email Illustration"
             className="mx-auto"
@@ -75,21 +76,21 @@ const CoursePageFooter = () => {
             </p>
             <div className="flex gap-4 mt-4 md:mt-0">
               <a href="#" className="hover:opacity-80">
-                <img
+                <Image
                   src="https://via.placeholder.com/24"
                   alt="Facebook"
                   className="w-6 h-6"
                 />
               </a>
               <a href="#" className="hover:opacity-80">
-                <img
+                <Image
                   src="https://via.placeholder.com/24"
                   alt="Twitter"
                   className="w-6 h-6"
                 />
               </a>
               <a href="#" className="hover:opacity-80">
-                <img
+                <Image
                   src="https://via.placeholder.com/24"
                   alt="YouTube"
                   className="w-6 h-6"
