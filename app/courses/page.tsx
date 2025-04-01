@@ -10,7 +10,7 @@ import ExploreTutor from '../components/ExploreTutor';
 import TutorList from '../components/Tutorlist';
 import PhysicalClass from '../components/PhysicalClass';
 import Certifications from '../components/Certifactions';
-import CoursePageFooter from '../components/CoursePageFooter';
+import Footer from '../components/Footer';
 
 const CourseCreatorSupport = () => {
   return (
@@ -19,7 +19,7 @@ const CourseCreatorSupport = () => {
       <p className="text-gray-700 mt-2 max-w-lg">
         Create and upload your courses effortlessly with our free editing and publishing assistance.
       </p>
-      <p className="mt-4 text-lg font-semibold">
+      <p className="text-gray-700 mt-2 max-w-lg">
         To get started, send a mail to 
         <a 
           href="mailto:minimalisticlearning2020@gmail.com" 
@@ -29,7 +29,7 @@ const CourseCreatorSupport = () => {
       </p>
       <div className="mt-6">
         <Image
-          src="/mnt/data/image.png"
+          src="https://images.pexels.com/photos/5706001/pexels-photo-5706001.jpeg?cs=srgb&dl=pexels-karolina-grabowska-5706001.jpg&fm=jpg&_gl=1*nv912b*_ga*MTgzNDUyODk5OC4xNzQxOTM5Mzc5*_ga_8JE65Q40S6*MTc0MzQ5ODM4NC41LjEuMTc0MzQ5ODQ5MS4wLjAuMA.."
           alt="Envelope"
           width={150}
           height={150}
@@ -42,7 +42,7 @@ const CourseCreatorSupport = () => {
 
 const Page = () => {
   return (
-    <div className="bg-blue-50 min-h-screen p-10">
+    <div className="bg-blue-50 min-h-screen">
       {/* Main Content */}
       <div className="space-y-10">
         {/* Hero Section */}
@@ -64,7 +64,7 @@ const Page = () => {
       </div>
 
       {/* Footer */}
-      <CoursePageFooter />
+      <Footer/>
     </div>
   );
 };

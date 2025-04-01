@@ -66,7 +66,9 @@ const Certifications = () => {
               <Image
                 src={cert.img}
                 alt={cert.title}
-                className="w-full h-48 object-cover"
+                width={800}
+                height={192}
+                className=" object-cover"
               />
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800">
@@ -130,7 +132,7 @@ const Certifications = () => {
               {/* Tutor Info */}
               <div className="flex items-center gap-4">
                 <img
-                  src="https://cdn4..com/i/1000x1000/18/58/color-silhouette-cartoon-half-body-faceless-man-vector-15091858.jpg"
+                  src="https://cdn4..com/i/1000x1000/18/58/color-silhouette-cartoon-half-body-faceless-man-vector-15091858.jpg" 
                   alt={tutor.name}
                   className="w-10 h-10 rounded-full"
                 />

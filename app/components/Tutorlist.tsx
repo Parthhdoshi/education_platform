@@ -48,7 +48,9 @@ const TutorList = () => {
               <Image
                 src={tutor.img}
                 alt={tutor.name}
-                className="w-20 h-20 rounded-full mb-4"
+                width={20}
+                height={20}
+                className="rounded-full mb-4"
               />
               {/* Tutor Details */}
               <h3 className="text-lg font-bold text-gray-800">{tutor.name}</h3>

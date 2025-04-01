@@ -163,6 +163,8 @@ export default function ExploreCourse() {
                     <Image
                       className="h-48 w-full object-cover rounded-xl"
                       src="https://cdn4.vectorstock.com/i/1000x1000/18/58/color-silhouette-cartoon-half-body-faceless-man-vector-15091858.jpg"
+                      width={100}
+                      height={100}
                       alt="Mountain"
                     />
                   </div>
