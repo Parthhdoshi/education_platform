@@ -30,7 +30,7 @@ const AdminDashboard = () => {
   ];
 
   return (
-    <div className="flex flex-wrap bg-blue-500">
+    <div className="flex flex-wrap sm:w-full">
 
       {/* Sidebar */}
       <aside className="w-64 bg-white shadow-md">
@@ -89,7 +89,7 @@ const AdminDashboard = () => {
       {/* Main Content */}
       <main className="flex-1 p-4 md:p-7 bg-[#daf0ff]">
         {/* Header with Dashboard title, notifications, and user profile */}
-    <div className="flex justify-between items-center bg-white  p-4 mt-16 lg:mt-0">
+    <div className="flex justify-between items-center bg-white  p-4 mt-16 lg:mt-0 sm:w-full">
     <h1 className="text-x2 md:text-2xl text-blue-800">Dashboard</h1>
 
            {/* Right Side: Notifications & Profile */}
@@ -309,4 +309,4 @@ const AdminDashboard = () => {
   );
 };
 
-export default AdminDashboard;
+export default AdminDashboard;
