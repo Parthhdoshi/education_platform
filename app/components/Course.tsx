@@ -10,42 +10,42 @@ const Course = () => {
     {
       title: "Introduction to Public Health",
       category: "Health",
-      description: "Explore the basics of public health, including strategies for well-being.",
+      description: "Explore the basics of public health, including strategies for well-being. Learn about disease prevention, health promotion, epidemiology, and the role of public policies in shaping community health.",
       img: "https://sidgs.com/wp-content/uploads/2023/02/Exploring-Emerging-Technologies-for-Digital-Transformation-in-Health-Care-02.png",
-      rating: 3, // ⭐ Rating out of 5
+      rating: 3,
     },
     {
       title: "Creative Writing Workshop",
       category: "Arts & Humanities",
-      description: "Master the art of storytelling, poetry, and other forms of creative writing.",
+      description: "Master the art of storytelling, poetry, and other forms of creative writing. Explore different writing styles, character development, plot structure, and literary techniques.",
       img: "https://www.shutterstock.com/image-vector/digital-drawing-creative-writing-using-260nw-2347893209.jpg",
       rating: 4,
     },
     {
       title: "Basics of Coding: Python for Beginners",
       category: "Science & Technology",
-      description: "Start your journey in programming with easy-to-follow Python lessons.",
+      description: "Start your journey in programming with easy-to-follow Python lessons. Learn the fundamentals of coding, including variables, loops, functions, and data structures.",
       img: "https://media.istockphoto.com/id/1413990965/photo/glowing-python-programming-language-code-on-a-blue-digital-surface-with-a-sphere-grid-design.jpg?s=612x612&w=0&k=20&c=sC5Gcktg85_J6e50P5DGngrez1MElLql5xrYKd13sA4=",
       rating: 5,
     },
     {
       title: "Financial Literacy 101",
       category: "Business",
-      description: "Understand budgeting, saving, and investing to manage personal or business finances.",
+      description: "Understand budgeting, saving, and investing to manage personal or business finances. Learn the fundamentals of financial planning, debt management, credit scores, and smart spending habits.",
       img: "https://www.shutterstock.com/image-vector/financial-literacy-budgeting-managing-personal-260nw-2307242813.jpg",
       rating: 3,
     },
     {
       title: "Fundamentals of Data Science",
       category: "Science & Technology",
-      description: "Understand data analysis, visualization, and the role of data in decision-making.",
+      description: "Understand data analysis, visualization, and the role of data in decision-making. Learn the basics of data collection, cleaning, and preprocessing.",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdPj3EGP36Vn1IrCMQUm9m3-xsrn2Awe5Nvw&s",
       rating: 4,
     },
     {
       title: "Nutrition and Wellness Essentials",
       category: "Health",
-      description: "Learn about balanced diets, food nutrients, and how to maintain a healthy lifestyle.",
+      description: "Learn about balanced diets, food nutrients, and how to maintain a healthy lifestyle. Understand the importance of macronutrients and micronutrients, meal planning, and hydration.",
       img: "https://motionarray.imgix.net/motion-array-2916866-jAhwN1Hscb-high_0008.jpg?w=660&q=60&fit=max&auto=format",
       rating: 2,
     },
@@ -58,6 +58,11 @@ const Course = () => {
 
   return (
     <div>
+      {/* Heading */}
+      <p className="text-4xl md:text-4xl font-bold text-center pb-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+        Explore Course
+      </p>
+
       {/* Category Buttons */}
       <div className="flex flex-wrap justify-center gap-2 sm:gap-4 md:gap-6 my-4">
         {categories.map((category, index) => (
@@ -76,42 +81,42 @@ const Course = () => {
       </div>
 
       {/* Courses Grid */}
-      <div className="px-1 sm:px-2 md:px-4 lg:px-4">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-6">
-        {filteredCourses.length > 0 ? (
-          filteredCourses.map((course, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img src={course.img} alt={course.title} className="w-full h-48 object-cover" />
-              <div className="p-4 flex flex-col h-[200px]">
-                <h3 className="text-lg font-bold text-gray-800">{course.title}</h3>
-                <p className="text-gray-600 text-sm mt-2">{course.description}</p>
+      <div className="px-1 sm:px-2 md:px-4 lg:px-36">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+          {filteredCourses.length > 0 ? (
+            filteredCourses.map((course, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src={course.img} alt={course.title} className="w-full h-48 object-cover" />
+                <div className="p-4 flex flex-col h-[200px]">
+                  <h3 className="text-lg font-bold text-gray-800">{course.title}</h3>
+                  <p className="text-gray-600 text-sm mt-2">{course.description}</p>
 
-                {/* Spacer - Pushes the stars and button to the bottom */}
-                <div className="flex-grow"></div>
+                  {/* Spacer - Pushes the stars and button to the bottom */}
+                  <div className="flex-grow"></div>
 
-                {/* Stars and Button Section */}
-                <div className="flex items-center justify-between mt-2">
-                  {/* Star Rating */}
-                  <div className="flex">
-                    {Array.from({ length: 5 }, (_, i) => (
-                      <span key={i} className={i < course.rating ? "text-yellow-500" : "text-gray-300"}>
-                        ★
-                      </span>
-                    ))}
+                  {/* Stars and Button Section */}
+                  <div className="flex items-center justify-between mt-2">
+                    {/* Star Rating */}
+                    <div className="flex">
+                      {Array.from({ length: 5 }, (_, i) => (
+                        <span key={i} className={i < course.rating ? "text-yellow-500" : "text-gray-300"}>
+                          ★
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Browse Certification Button */}
+                    <button className="px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition">
+                      Browse Certification
+                    </button>
                   </div>
-
-                  {/* Browse Certification Button */}
-                  <button className="px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition">
-                    Browse Certification
-                  </button>
                 </div>
               </div>
-            </div>
-          ))
-        ) : (
-          <p className="text-gray-500 text-center col-span-3">No courses available in this category.</p>
-        )}
-      </div>
+            ))
+          ) : (
+            <p className="text-gray-500 text-center col-span-3">No courses available in this category.</p>
+          )}
+        </div>
       </div>
     </div>
   );

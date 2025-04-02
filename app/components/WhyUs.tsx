@@ -9,6 +9,8 @@ export default function WhyUs() {
           <div className="w-full md:w-1/2 mb-8 md:mb-0 flex justify-center">
             <Image
               src="/images/pana.png"
+              width={2000}
+              height={2000}
               alt="Learning Illustration"
               className="rounded-lg"
             />
@@ -53,6 +55,8 @@ export default function WhyUs() {
           <div className="w-full md:w-1/2 flex justify-center">
             <Image
               src="/images/pana (1).png"
+              width={2000}
+              height={2000}
               alt="Learn at Your Own Pace"
               className="rounded-lg"
             />
@@ -67,6 +71,8 @@ export default function WhyUs() {
           <div className="w-full md:w-1/2 flex justify-center">
             <Image
               src="/images/pana (2).png"
+              width={2000}
+              height={2000}
               alt="Certificates Illustration"
               className="rounded-lg"
             />
@@ -108,6 +114,8 @@ export default function WhyUs() {
           <div className="w-full md:w-1/2 flex justify-center">
             <Image
               src="/images/pana (3).png"
+              width={2000}
+              height={2000}
               alt="Experts Illustration"
               className="rounded-lg"
             />

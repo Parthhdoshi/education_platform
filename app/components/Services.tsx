@@ -49,10 +49,10 @@ const Services = () => {
   ];
 
   return (
-    <section className="max-w-6xl mx-auto min-h-screen ">
+    <section className="max-w-6xl p-10 mx-auto min-h-screen ">
       <div className="">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
             Our Services
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
