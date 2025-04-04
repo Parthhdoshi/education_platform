@@ -10,7 +10,7 @@ const Footer = () => {
         >
           <path
             d="M0,0 C300,120 900,0 1200,120 L1200,0 L0,0 Z"
-            className="fill-[#BFDBFE]"
+            className="fill-[#daf0ff]"
           ></path>
         </svg>
       </div>
@@ -116,7 +116,7 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="text-center text-gray-200 text-sm mt-6">
-        © 2024 Minimalistic Learning. All rights reserved.
+        © 2025 Minimalistic Learning. All rights reserved.
       </div>
     </footer>
   );

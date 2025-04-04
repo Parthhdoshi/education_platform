@@ -14,8 +14,8 @@ import Footer from '../components/Footer';
 
 const CourseCreatorSupport = () => {
   return (
-    <section className="bg-blue-100 flex flex-col items-center justify-center py-12 px-6 text-center">
-      <h2 className="text-2xl font-bold text-blue-900">Course Creator Support</h2>
+    <section className="bg-[#daf0ff] flex flex-col items-center justify-center py-12 px-6 text-center">
+      <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Course Creator Support</h2>
       <p className="text-gray-700 mt-2 max-w-lg">
         Create and upload your courses effortlessly with our free editing and publishing assistance.
       </p>
@@ -29,7 +29,7 @@ const CourseCreatorSupport = () => {
       </p>
       <div className="mt-6">
         <Image
-          src="https://images.pexels.com/photos/5706001/pexels-photo-5706001.jpeg?cs=srgb&dl=pexels-karolina-grabowska-5706001.jpg&fm=jpg&_gl=1*nv912b*_ga*MTgzNDUyODk5OC4xNzQxOTM5Mzc5*_ga_8JE65Q40S6*MTc0MzQ5ODM4NC41LjEuMTc0MzQ5ODQ5MS4wLjAuMA.."
+          src="/mnt/data/image.png"
           alt="Envelope"
           width={150}
           height={150}
@@ -42,7 +42,7 @@ const CourseCreatorSupport = () => {
 
 const Page = () => {
   return (
-    <div className="bg-blue-50 min-h-screen">
+    <div className="bg-blue-50 min-h-screen p-10">
       {/* Main Content */}
       <div className="space-y-10">
         {/* Hero Section */}
@@ -64,7 +64,7 @@ const Page = () => {
       </div>
 
       {/* Footer */}
-      <Footer/>
+      <CoursePageFooter />
     </div>
   );
 };

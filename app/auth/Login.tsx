@@ -1,5 +1,5 @@
 import {
-  GoogleSignInButton,
+  GooglelogInButton,
 } from "../components/authButtons";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../lib/auth";
@@ -21,9 +21,9 @@ const LoginPage = async () => {
       <span className="text-2xl font-semibold text-slate-900 text-center mt-4">
         Or
       </span>
-      <GoogleSignInButton />
-      {/* <GithubSignInButton /> */}
-      {/* <CredentialsSignInButton /> */}
+      <GooglelogInButton />
+      {/* <GithublogInButton /> */}
+      {/* <CredentialslogInButton /> */}
     </div>
   </div>
   );

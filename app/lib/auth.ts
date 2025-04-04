@@ -11,7 +11,7 @@ import connectDB from './connectDB';
 import User from '../models/user';
 import { console } from 'inspector';
 
-// interface AppxSigninResponse {
+// interface AppxlogInResponse {
 //   data: {
 //     userid: string;
 //     name: string;
@@ -222,7 +222,7 @@ export const authOptions = {
     //         };
     //       }
     //       console.log('not in db');
-    //       const user: AppxSigninResponse = await validateUser(
+    //       const user: AppxlogInResponse = await validateUser(
     //         credentials.username,
     //         credentials.password,
     //       );
@@ -274,7 +274,7 @@ export const authOptions = {
     // }),
   ],
   callbacks: {
-    async signIn({ user }) {
+    async logIn({ user }) {
       await connectDB();
       const existingUser  = await User.findOne({ email: user.email });
       if (!existingUser ) {
@@ -311,6 +311,6 @@ export const authOptions = {
   //   },
   // },
   pages: {
-    signIn: '/signin',
+    logIn: '/logIn',
   },
 } satisfies NextAuthOptions;

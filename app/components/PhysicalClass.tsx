@@ -2,10 +2,10 @@ import React from "react";
 
 const PhysicalClass = () => {
   return (
-    <section className="bg-blue-50 py-10">
+    <section className="bg-[#daf0ff] py-10">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
-        <h2 className="text-2xl font-bold text-center text-purple-600 mb-6">
+        <h2 className="text-3xl font-bold text-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
           Physical Classes
         </h2>
         <p className="text-center text-gray-600 mb-10">
@@ -28,6 +28,7 @@ const PhysicalClass = () => {
                 strokeWidth={2}
                 stroke="currentColor"
                 className="w-12 h-12"
+                style={{ transform: "rotate(180deg)" }}
               >
                 <path
                   strokeLinecap="round"
@@ -50,6 +51,7 @@ const PhysicalClass = () => {
                 strokeWidth={2}
                 stroke="currentColor"
                 className="w-12 h-12"
+                style={{ transform: "rotate(180deg)" }}
               >
                 <path
                   strokeLinecap="round"
@@ -74,6 +76,7 @@ const PhysicalClass = () => {
                 strokeWidth={2}
                 stroke="currentColor"
                 className="w-12 h-12"
+                style={{ transform: "rotate(180deg)" }}
               >
                 <path
                   strokeLinecap="round"

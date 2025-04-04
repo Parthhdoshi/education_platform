@@ -4,7 +4,7 @@ import React from 'react'
 const ExploreTutor = () => {
   return (
     <div>
-      <section className="bg-blue-50 min-h-[438px] flex items-center shadow-md">
+      <section className="bg-[#daf0ff] min-h-[438px] flex items-center">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-10">
           {/* Left Content */}
           <div>
@@ -15,7 +15,7 @@ const ExploreTutor = () => {
               <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
                 Hire a Tutor
               </button>
-              <button className="px-6 py-3 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200">
+              <button className="px-6 py-3 bg-blue-200 text-blue-800 rounded-lg hover:bg-blue-300">
                 Customise Courses
               </button>
             </div>
@@ -23,10 +23,10 @@ const ExploreTutor = () => {
 
           {/* Right Image */}
           <div className="relative">
-            <div className="absolute top-0 right-0 text-sm text-gray-600 flex items-center gap-2">
-              <span>John Does</span>
+            <div className="justify-end top-0 right-0 text-sm text-gray-600 flex items-center gap-2">
+              <span>John Doe</span>
               <Image
-                src="https://via.placeholder.com/40"
+                src="https://cdn4.vectorstock.com/i/1000x1000/18/58/color-silhouette-cartoon-half-body-faceless-man-vector-15091858.jpg"
                 alt="User Avatar"
                 width={40}
                 height={40}
@@ -34,10 +34,10 @@ const ExploreTutor = () => {
               />
             </div>
             <Image
-              src="https://via.placeholder.com/300x300.png?text=Student"
+              src="/images/herostudent.png"
               alt="Student"
-              width={256}
-              height={256}
+              width={400}
+              height={400}
               className="rounded-full object-cover shadow-lg"
             />
           </div>

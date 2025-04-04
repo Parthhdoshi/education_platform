@@ -58,10 +58,6 @@ export default function WhyUs() {
               width={100}
               height={100}
               alt="Learn at Your Own Pace"
-              className="rounded-lg"
-            />
-          </div>
-        </div>
       </div>
 
       <div className="flex flex-col gap-16 items-center justify-center p-8 mb-10">

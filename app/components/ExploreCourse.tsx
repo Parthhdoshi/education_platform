@@ -19,7 +19,7 @@ export default function ExploreCourse() {
       sx={{ width: "100%", typography: "body1", fontWeight: "bold" }}
       className="max-w-7xl mx-auto h-full"
     >
-    <p className="text-4xl md:text-6xl text-center pb-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+    <p className="text-3xl md:text-6xl text-center pb-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
   Explore Course
 </p>
       <TabContext value={value}>
@@ -74,7 +74,7 @@ export default function ExploreCourse() {
                       href="#"
                       className="block mt-1 text-xl leading-tight font-bold text-black hover:underline"
                     >
-                      Finding customers for a new FinTech company
+                      Introduction to Public Health
                     </a>
                     <p className="mt-2 text-slate-500">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.

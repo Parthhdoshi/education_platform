@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Footer from "./Footer";
 
 const AboutUs = () => {
   const teamMembers = [
@@ -16,33 +17,31 @@ const AboutUs = () => {
       img: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
-      name: "Manan Doshi",
+      name: "Harsh Ratnani",
       role: "User Experience and User Interface Designer.",
       img: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
   ];
 
   return (
-    <div className="bg-blue-50 min-h-screen">
+    <div className="bg-[#daf0ff] min-h-screen">
       {/* Our Journey Section */}
       <section className="py-16 relative">
-        <div className="absolute top-2 left-2 w-16 h-16 bg-blue-200 rounded-full"></div>
-        <div className="absolute bottom-5 right-5 w-12 h-12 bg-purple-200 rounded-full"></div>
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
           {/* Journey Text */}
           <div className="md:w-1/2">
-            <h2 className="text-3xl font-bold text-purple-600 mb-6">
+            <h2 className="text-5xl font-bold text-purple-600 mb-6">
               Our Journey
             </h2>
             <p className="text-gray-600 mb-4">
-              <strong>2024: Building the Team</strong>
+              <strong className="text-lg">2024: Building the Team</strong>
               <br />
               Co-founders brought together developers and education enthusiasts
               to design a platform that simplifies the process for educators
               and improves learning outcomes for students.
             </p>
             <p className="text-gray-600">
-              <strong>2025: Beta Version Launched</strong>
+              <strong className="text-lg">2025: Beta Version Launched</strong>
               <br />
               Released the platform’s first version, offering basic course
               creation tools and support for educators.
@@ -62,9 +61,9 @@ const AboutUs = () => {
       </section>
 
       {/* Meet Our Team Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#daf0ff]">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-purple-600 mb-10">
+          <h2 className="text-5xl font-bold text-center text-purple-600 mb-10">
             Meet Our Team
           </h2>
           {/* Team Members Grid */}
@@ -92,6 +91,9 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+      <div>
+        <Footer/>
+      </div>
     </div>
   );
 };

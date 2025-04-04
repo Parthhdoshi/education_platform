@@ -3,11 +3,11 @@
 import Image from "next/image";
 import googleLogo from "@/public/google.png";
 import githubLogo from "@/public/github.png";
-import { signIn } from "next-auth/react";
+import { logIn } from "next-auth/react";
 
-export function GoogleSignInButton() {
+export function GooglelogInButton() {
   const handleClick = () => {
-    signIn("google");
+    logIn("google");
   };
 
   return (
@@ -21,9 +21,9 @@ export function GoogleSignInButton() {
   );
 }
 
-export function GithubSignInButton() {
+export function GithublogInButton() {
   const handleClick = () => {
-    signIn("github");
+    logIn("github");
   };
 
   return (
@@ -37,9 +37,9 @@ export function GithubSignInButton() {
   );
 }
 
-export function CredentialsSignInButton() {
+export function CredentialslogInButton() {
   const handleClick = () => {
-    signIn();
+    logIn();
   };
 
   return (

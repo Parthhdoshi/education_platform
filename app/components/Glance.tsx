@@ -4,7 +4,7 @@ const ContactForm = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Left Section: Title, Description, and Social Media */}
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-4">
             Contact Us Today
           </h2>
           <p className="text-gray-600 mb-6 leading-relaxed">

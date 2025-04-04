@@ -1,4 +1,4 @@
-import ExploreCourse from "./components/ExploreCourse";
+import Course from "./components/Course";
 import Footer from "./components/Footer";
 import Glance from "./components/Glance";
 import Hero from "./components/Hero";
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <ExploreCourse/>
+      <Course/>
       <Services />
       <WhyUs/>
       {/* <InfiniteMovingCardsDemo/> */}
