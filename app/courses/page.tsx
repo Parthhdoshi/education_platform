@@ -64,7 +64,7 @@ const Page = () => {
       </div>
 
       {/* Footer */}
-      <CoursePageFooter />
+      <Footer />
     </div>
   );
 };
