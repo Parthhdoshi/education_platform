@@ -17,7 +17,7 @@ const PhysicalClass = () => {
         </p>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Card 1: Upcoming Sessions */}
           <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
             <div className="text-blue-600 mb-4">
@@ -94,7 +94,7 @@ const PhysicalClass = () => {
             </p>
             <p className="text-gray-600 text-sm mt-1">Class Duration: 1 hour</p>
             <p className="text-gray-600 text-sm mt-1">Class Type: One-on-one</p>
-            <button className="mt-4 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
+            <button className="flex mt-4 px-2 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
               Reschedule Class
             </button>
           </div>

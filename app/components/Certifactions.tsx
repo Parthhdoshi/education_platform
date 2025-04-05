@@ -149,7 +149,7 @@ const Certifications = () => {
                 </div>
               </div>
               {/* Rating and Buttons */}
-              <div className="flex items-center gap-4">
+              <div className="flex flex-wrap items-center gap-4">
                 <div className="flex">
                   {Array.from({ length: 5 }).map((_, starIndex) => (
                     <svg

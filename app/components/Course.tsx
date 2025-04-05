@@ -57,7 +57,7 @@ const Course = () => {
     : courses.filter(course => course.category === activeCategory);
 
   return (
-    <div>
+    <div className="bg-[#daf0ff]">
       {/* Heading */}
       <p className="text-4xl md:text-4xl font-bold text-center pb-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
         Explore Course
