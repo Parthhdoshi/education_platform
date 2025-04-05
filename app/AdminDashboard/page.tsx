@@ -31,21 +31,10 @@ const AdminDashboard = () => {
     { name: 'Monthly', value: 30, color: '#60A5FA' },
   ];
 
-<<<<<<< HEAD
-  return (
-    <div className="flex flex-wrap sm:w-full">
-
-      {/* Sidebar */}
-      <aside className="w-64 bg-white shadow-md">
-        <div className="p-4">
-          <h2 className="text-xl font-semibold text-blue-600">Minimalistic Learning</h2>
-        </div>
-=======
   // Sidebar component
   const Sidebar = () => {
     return (
       <aside className={`bg-white min-h-screen top-0 shadow-md transition-transform duration-300 w-64 fixed z-50 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:static md:flex md:flex-col`}>
->>>>>>> ff494e5 (Updated TutorDashboard)
         <nav className="mt-6">
           <ul>
             <li className="px-4 py-3 text-indigo-900 font-bold">
@@ -98,15 +87,6 @@ const AdminDashboard = () => {
       <Sidebar />
 
       {/* Main Content */}
-<<<<<<< HEAD
-      <main className="flex-1 p-4 md:p-7 bg-[#daf0ff]">
-        {/* Header with Dashboard title, notifications, and user profile */}
-    <div className="flex justify-between items-center bg-white  p-4 mt-16 lg:mt-0 sm:w-full">
-    <h1 className="text-x2 md:text-2xl text-blue-800">Dashboard</h1>
-
-           {/* Right Side: Notifications & Profile */}
-          <div className="flex items-center space-x-4 md:space-x-6">
-=======
       <main className="flex-1 bg-[#daf0ff]">
         {/* Mobile Toggle Button */}
         <button
@@ -117,7 +97,6 @@ const AdminDashboard = () => {
         {/* Header with notifications, and user profile */}
         <div className="flex flex-wrap bg-white shadow-md px-8 justify-end items-center">
           <div className="flex items-center space-x-6">
->>>>>>> ff494e5 (Updated TutorDashboard)
             {/* Notification Icon with Badge */}
             <div className="relative cursor-pointer">
               <FaBell className="text-gray-600 text-xl md:text-2xl" />
