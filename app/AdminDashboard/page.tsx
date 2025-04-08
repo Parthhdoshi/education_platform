@@ -196,13 +196,11 @@ const AdminDashboard = () => {
 
         {/* Activity Log and Student Engagement Section */}
         <div className="p-4 grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
-          {/* Activity Log Title (Outside Box) */}
-          <h2 className="text-lg font-medium text-blue-700 lg:col-span-2">Activity Log</h2>
-          {/* Student Engagement Title (Outside Box) */}
-          <h2 className="text-lg font-medium text-blue-700">Student Engagement</h2>
 
           {/* Activity Log Box */}
-          <div className="lg:col-span-2 bg-white rounded-xl shadow-sm p-4 md:p-6">
+          <div  className="lg:col-span-2">
+          <h2 className="text-lg font-medium text-blue-700 mb-4 lg:col-span-2">Activity Log</h2>
+          <div className=" bg-white rounded-xl shadow-sm p-4 md:p-14">
             <table className="w-full">
               <thead>
                 <tr className="text-left text-gray-500 text-sm">
@@ -234,8 +232,11 @@ const AdminDashboard = () => {
               </tbody>
             </table>
           </div>
+          </div>
 
           {/* Student Engagement Box */}
+          <div>
+          <h2 className="text-lg font-medium mb-4 text-blue-700">Student Engagement</h2>
           <div className="p-4 md:p-6 bg-white rounded-xl shadow-md">
             <div className="flex justify-center items-center mb-6">
               <ResponsiveContainer width={250} height={250}>
@@ -284,6 +285,7 @@ const AdminDashboard = () => {
                 </div>
               ))}
             </div>
+          </div>
           </div>
         </div>
       </main>

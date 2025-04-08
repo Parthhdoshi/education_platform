@@ -37,10 +37,9 @@ const Page = () => {
             { img: "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", title: "Digital Marketing" },
             { img: "https://images.pexels.com/photos/8919548/pexels-photo-8919548.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", title: "Finance & Investing" }
           ].map((topic, index) => (
-            <div key={index} className="bg-white rounded-lg relative overflow-hidden">
+            <div key={index} className="bg-transparent rounded-lg relative overflow-hidden">
               <img
                 src={topic.img}
-                alt={topic.title}
                 className="w-full h-52 object-cover rounded-lg"
               />
               <div className="absolute inset-0 flex items-center justify-center">

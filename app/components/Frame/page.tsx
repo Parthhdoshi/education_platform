@@ -44,9 +44,13 @@ const LearningDashboard: React.FC = () => {
               img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI-MUJejb9GvGSx0Mwgk0WYCQhLh0INpyrm3EqEYUX2jLNnBhz5BljGOs9OR2_KBDPNvE&usqp=CAU",
             },
           ].map((course, index) => (
-            <div key={index} className="bg-white shadow-md p-4 rounded-lg">
-              <img src={course.img} alt={course.title} className="w-full h-40 object-cover rounded-md" />
-              <h3 className="font-medium mt-2">{course.title}</h3>
+            <div key={index} className="bg-transparent relative rounded-lg">
+              <img src={course.img} alt={course.title} className="w-full h-40 object-cover rounded-lg" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <h3 className="text-black text-lg font-semibold px-4 py-2 rounded-lg bg-[#daf0ff]">
+                  {course.title}
+                </h3>
+              </div>
               <p className="text-sm text-gray-600">{course.desc}</p>
             </div>
           ))}
