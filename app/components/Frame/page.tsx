@@ -30,17 +30,17 @@ const LearningDashboard: React.FC = () => {
           {[
             {
               title: "Digital Marketing",
-              desc: "Essential strategies for modern marketing.",
+              desc: "Essential strategies for modern marketing.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
               img: "https://etimg.etb2bimg.com/photo/89866384.cms",
             },
             {
               title: "Social Media Management",
-              desc: "Grow and manage social platforms effectively.",
+              desc: "Grow and manage social platforms effectively.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
               img: "https://okcredit-blog-images-prod.storage.googleapis.com/2020/12/shutterstock_338604821.jpg",
             },
             {
               title: "Health",
-              desc: "Improve your Health ranking with us.",
+              desc: "Improve your Health ranking with us.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
               img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI-MUJejb9GvGSx0Mwgk0WYCQhLh0INpyrm3EqEYUX2jLNnBhz5BljGOs9OR2_KBDPNvE&usqp=CAU",
             },
           ].map((course, index) => (
@@ -51,7 +51,7 @@ const LearningDashboard: React.FC = () => {
                   {course.title}
                 </h3>
               </div>
-              <p className="text-sm text-gray-600">{course.desc}</p>
+              <p className="text-sm mt-4 text-gray-600">{course.desc}</p>
             </div>
           ))}
         </div>

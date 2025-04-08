@@ -87,15 +87,15 @@ const Course = () => {
             filteredCourses.map((course, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
                 <img src={course.img} alt={course.title} className="w-full h-48 object-cover" />
-                <div className="p-4 flex flex-col h-[200px]">
+                <div className="p-4 flex flex-col h-auto min-h-[220px]">
                   <h3 className="text-lg font-bold text-gray-800">{course.title}</h3>
-                  <p className="text-gray-600 text-sm mt-2">{course.description}</p>
+                  <p className="text-gray-600 text-sm md:text-base mt-2 line-clamp-3">{course.description}</p>
 
                   {/* Spacer - Pushes the stars and button to the bottom */}
                   <div className="flex-grow"></div>
 
                   {/* Stars and Button Section */}
-                  <div className="flex items-center justify-between mt-2">
+                  <div className="flex items-center justify-between mt-4 flex-wrap gap-2">
                     {/* Star Rating */}
                     <div className="flex">
                       {Array.from({ length: 5 }, (_, i) => (
@@ -106,7 +106,7 @@ const Course = () => {
                     </div>
 
                     {/* Browse Certification Button */}
-                    <button className="px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition">
+                    <button className="px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition w-full md:w-auto">
                       Browse Certification
                     </button>
                   </div>
