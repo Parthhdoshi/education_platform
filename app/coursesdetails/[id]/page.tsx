@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import { Star } from "lucide-react";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
-import { Facebook, Twitter, Instagram, Linkedin, ChevronDown, Phone, Check } from 'lucide-react';
+import {ChevronDown, Phone, Check } from 'lucide-react';
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 // Slugify helper - must match Course.tsx logic
 const slugify = (title: string) =>
@@ -68,10 +69,10 @@ const CourseDetails = ({ params }: Props) => {
         </div>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 items-start">
 
           <div className="md:col-span-1 lg:col-span-2">
-              <div className="bg-transparent rounded-lg border mt-4 mb-4 border-blue-400 p-6 mx-auto">
+              <div className="bg-white shadow-sm rounded-lg border mt-4 mb-4 border-blue-400 p-6 mx-auto">
                 <h3 className="text-2xl font-bold mb-4">What You Will Learn</h3>
                 
                 {Array.isArray(course.topics) ? (
@@ -95,7 +96,7 @@ const CourseDetails = ({ params }: Props) => {
                 )}
               </div>
 
-              <div className="bg-transparent rounded-lg border mt-8 border-blue-400 p-6 mx-auto">
+              <div className="bg-white shadow-sm rounded-lg border mt-8 border-blue-400 p-6 mx-auto">
                 <div className="border-t border-gray-200">
                     <h4 className="text-xl font-semibold mb-3">Course Information</h4>
                     <div className="grid grid-cols-2 gap-4">
@@ -118,9 +119,33 @@ const CourseDetails = ({ params }: Props) => {
                     </div>
                   </div>
               </div>
+
+              <div className="bg-white shadow-sm rounded-lg border mt-5 border-blue-400 p-6 mx-auto">
+                  <h4 className="text-2xl font-semibold mb-8">Course Content</h4>
+
+                  {course.content && Array.isArray(course.content) ? (
+                    <ul className="space-y-4">
+                      {course.content.map((item, index) => {
+                        const noMarginTitles = ["Course Intro", "Watch Before Start",];
+                        const marginClass = noMarginTitles.includes(item.title) ? "" : "mb-7";
+
+                        return (
+                          <li key={index} className="flex justify-between items-center">
+                            <span className={`text-gray-900 ${marginClass}`}>{item.title}</span>
+                            <span className="font-medium text-blue-600 rounded-full px-1 bg-blue-100">{item.duration}</span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  ) : (
+                    <p className="text-gray-600">Course content will be available soon.</p>
+                  )}
+              </div>
+
+              
           </div>
 
-        <div className="w-80 mx-auto m-4 bg-white rounded-lg shadow-sm p-4">
+        <div className="sticky top-8 self-start w-80 mx-auto m-4 bg-white border border-blue-400 rounded-lg shadow-sm p-4">
           <div className="flex justify-between items-center mb-2">
             <div>
               <span className="text-xl font-semibold text-gray-800">₹1500</span>
@@ -180,16 +205,16 @@ const CourseDetails = ({ params }: Props) => {
 
           <div className="flex justify-center space-x-4 mt-16 mb-12">
             <a href="#" className="text-gray-400 hover:text-gray-600">
-              <Facebook className="h-5 w-5" />
+              <FaFacebook className="h-5 w-5" />
             </a>
             <a href="#" className="text-gray-400 hover:text-gray-600">
-              <Twitter className="h-5 w-5" />
+              <FaTwitter className="h-5 w-5" />
             </a>
             <a href="#" className="text-gray-400 hover:text-gray-600">
-              <Instagram className="h-5 w-5" />
+              <FaInstagram className="h-5 w-5" />
             </a>
             <a href="#" className="text-gray-400 hover:text-gray-600">
-              <Linkedin className="h-5 w-5" />
+              <FaLinkedin className="h-5 w-5" />
             </a>
           </div>
 
