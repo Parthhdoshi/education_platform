@@ -144,24 +144,23 @@ const CourseDetails = ({ params }: Props) => {
                           <ChevronDown className="h-5 w-5 transition-transform duration-300 group-data-[state=open]:rotate-180" />
                         </Accordion.Trigger>
 
-
                         <Accordion.Content className="px-4 py-2 bg-white text-gray-700 text-sm border-t">
                           <div className="mb-6 flex justify-between items-center">
                             <span className="text-base text-gray-900">Course Intro</span>
                             <span className="font-medium text-blue-600 rounded-full px-1 bg-blue-100">
-                              {item.duration}
+                              {item.type}
                             </span>
                           </div>
                           <div className="mt-4 mb-6 flex justify-between items-center">
                             <span className="text-base text-gray-900">Watch Befor Start</span>
                             <span className="font-medium text-blue-600 rounded-full px-1 bg-blue-100">
-                              {item.duration}
+                              {item.type}
                             </span>
                           </div>
                           <div className="mt-4 mb-6 flex justify-between items-center">
                             <span className="text-base text-gray-900">Read Before Start</span>
                             <span className="font-medium text-blue-600 rounded-full px-1 bg-blue-100">
-                              {item.duration}
+                              {item.type}
                             </span>
                           </div>
                         </Accordion.Content>
@@ -172,8 +171,6 @@ const CourseDetails = ({ params }: Props) => {
                     <p className="text-gray-600">Course content will be available soon.</p>
                   )}
               </div>
-
-              
           </div>
 
         <div className="sticky top-8 self-start w-80 mx-auto m-4 bg-white border border-blue-400 rounded-lg shadow-sm p-4">
