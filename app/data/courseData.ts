@@ -28,9 +28,6 @@ export const courses = [
       certificate: "Yes",
       content: [
         { title: "Intro to Course And Histudy", duration: "1 hr 40 min", type: "lecture" },
-        { title: "Course Intro", duration: "30 min", type: "preview" },
-        { title: "Watch Before Start", duration: "0.5 min", type: "preview" },
-        { title: "Read Before Start", duration: "", type: "lecture" },
         { title: "Course Fundamentals", duration: "1 hr 40 min", type: "lecture" },
         { title: "You Can Develop Skill And Setup", duration: "2 hr 35 min", type: "lecture" },
         { title: "15 Things To Know About Education?", duration: "40 min", type: "lecture" },
@@ -57,9 +54,6 @@ export const courses = [
         certificate: "Yes",
         content: [
           { title: "Intro to Course And Histudy", duration: "1 hr 40 min", type: "lecture" },
-          { title: "Course Intro", duration: "30 min", type: "preview" },
-          { title: "Watch Before Start", duration: "0.5 min", type: "preview" },
-          { title: "Read Before Start", duration: "", type: "lecture" },
           { title: "Course Fundamentals", duration: "1 hr 40 min", type: "lecture" },
           { title: "You Can Develop Skill And Setup", duration: "2 hr 35 min", type: "lecture" },
           { title: "15 Things To Know About Education?", duration: "40 min", type: "lecture" },
@@ -86,9 +80,6 @@ export const courses = [
       certificate: "Yes",
       content: [
         { title: "Intro to Course And Histudy", duration: "1 hr 40 min", type: "lecture" },
-        { title: "Course Intro", duration: "30 min", type: "preview" },
-        { title: "Watch Before Start", duration: "0.5 min", type: "preview" },
-        { title: "Read Before Start", duration: "", type: "lecture" },
         { title: "Course Fundamentals", duration: "1 hr 40 min", type: "lecture" },
         { title: "You Can Develop Skill And Setup", duration: "2 hr 35 min", type: "lecture" },
         { title: "15 Things To Know About Education?", duration: "40 min", type: "lecture" },
@@ -115,9 +106,6 @@ export const courses = [
         certificate: "Yes",
         content: [
           { title: "Intro to Course And Histudy", duration: "1 hr 40 min", type: "lecture" },
-          { title: "Course Intro", duration: "30 min", type: "preview" },
-          { title: "Watch Before Start", duration: "0.5 min", type: "preview" },
-          { title: "Read Before Start", duration: "", type: "lecture" },
           { title: "Course Fundamentals", duration: "1 hr 40 min", type: "lecture" },
           { title: "You Can Develop Skill And Setup", duration: "2 hr 35 min", type: "lecture" },
           { title: "15 Things To Know About Education?", duration: "40 min", type: "lecture" },
@@ -144,9 +132,6 @@ export const courses = [
         certificate: "Yes",
         content: [
           { title: "Intro to Course And Histudy", duration: "1 hr 40 min", type: "lecture" },
-          { title: "Course Intro", duration: "30 min", type: "preview" },
-          { title: "Watch Before Start", duration: "0.5 min", type: "preview" },
-          { title: "Read Before Start", duration: "", type: "lecture" },
           { title: "Course Fundamentals", duration: "1 hr 40 min", type: "lecture" },
           { title: "You Can Develop Skill And Setup", duration: "2 hr 35 min", type: "lecture" },
           { title: "15 Things To Know About Education?", duration: "40 min", type: "lecture" },
@@ -173,9 +158,6 @@ export const courses = [
         certificate: "No",
         content: [
           { title: "Intro to Course And Histudy", duration: "1 hr 40 min", type: "lecture" },
-          { title: "Course Intro", duration: "30 min", type: "preview" },
-          { title: "Watch Before Start", duration: "0.5 min", type: "preview" },
-          { title: "Read Before Start", duration: "", type: "lecture" },
           { title: "Course Fundamentals", duration: "1 hr 40 min", type: "lecture" },
           { title: "You Can Develop Skill And Setup", duration: "2 hr 35 min", type: "lecture" },
           { title: "15 Things To Know About Education?", duration: "40 min", type: "lecture" },
