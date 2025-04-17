@@ -16,17 +16,17 @@ const courses = [
   {
     title: "Financial planning for beginners",
     description: "Learn about managing money and investing in the right places",
-    image: "/finance.jpg"
+    image: "https://www.shutterstock.com/image-vector/financial-literacy-budgeting-managing-personal-260nw-2307242813.jpg"
   },
   {
     title: "Fundamentals of Data Science",
     description: "Master data analysis and machine learning concepts",
-    image: "/coding.jpg"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdPj3EGP36Vn1IrCMQUm9m3-xsrn2Awe5Nvw&s"
   },
   {
     title: "Nutrition and Wellness Basics",
     description: "Learn about healthy living and balanced nutrition",
-    image: "/fitness.jpg"
+    image: "https://motionarray.imgix.net/motion-array-2916866-jAhwN1Hscb-high_0008.jpg?w=660&q=60&fit=max&auto=format"
   }
 ];
 
@@ -81,10 +81,13 @@ export default function StudentDashboard() {
                 </button>
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-gray-200 relative overflow-hidden">
-                    <Image src="" alt="Profile" />
+                    <Image src="https://cdn4.vectorstock.com/i/1000x1000/18/58/color-silhouette-cartoon-half-body-faceless-man-vector-15091858.jpg" 
+                    alt="Profile" 
+                    width={50}
+                    height={50} />
                   </div>
                   <div>
-                    <p className="text-sm font-medium">sunny developer</p>
+                    <p className="text-sm font-medium">Jone Doe</p>
                     <p className="text-xs text-gray-500">Student</p>
                   </div>
                 </div>
@@ -116,7 +119,7 @@ export default function StudentDashboard() {
             <section className="mb-12">
               <div className="flex justify-between items-center mb-8">
                 <h2 className="text-xl sm:text-2xl font-semibold text-gray-800">Popular Courses</h2>
-                <a href="#" className="text-[#6B7AFF] text-sm hover:text-blue-600 flex items-center">
+                <a href="/courses" className="text-[#6B7AFF] text-sm hover:text-blue-600 flex items-center">
                   View all
                   <ChevronRight className="w-4 h-4 ml-1" />
                 </a>
