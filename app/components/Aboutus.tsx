@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const AboutUs = () => {
@@ -49,7 +50,7 @@ const AboutUs = () => {
           </div>
           {/* Journey Image */}
           <div className="md:w-1/3 flex justify-end">
-            <img
+            <Image
               src="https://media.istockphoto.com/id/157284581/photo/road-by-night.jpg?s=612x612&w=0&k=20&c=utloT84rFRHikE2EcrnG5N-bE_R4dQEfKcgrPxGjUyY="
               alt="Journey Image"
               className="rounded-full shadow-lg"
@@ -71,7 +72,7 @@ const AboutUs = () => {
                 key={index}
                 className="bg-white rounded-lg shadow-lg overflow-hidden"
               >
-                <img
+                <Image
                   src={member.img}
                   alt={member.name}
                   className="w-full h-48 object-cover"

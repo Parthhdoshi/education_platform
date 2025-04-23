@@ -9,11 +9,11 @@ const Hero = () => {
   return (
     <section className="h-[90vh] flex items-center justify-center px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-     
+
 {/* Left Section */}
 <div className="order-2 md:order-1">
   <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-4">
-    Your Learning <span className="text-blue-600">Journey</span> Starts
+    Yours Learning <span className="text-blue-600">Journey</span> Starts with
     <br />
     <span className="text-blue-600">Here</span>
   </h1>

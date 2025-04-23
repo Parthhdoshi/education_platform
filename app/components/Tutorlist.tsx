@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const TutorList = () => {
@@ -44,7 +45,7 @@ const TutorList = () => {
               className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center"
             >
               {/* Tutor Image */}
-              <img
+              <Image
                 src={tutor.img}
                 alt={tutor.name}
                 className="w-20 h-20 rounded-full mb-4"
