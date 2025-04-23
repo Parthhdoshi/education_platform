@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { FaThLarge, FaUser, FaCreditCard,FaBarChart, FaCog, FaSignOut, FaBell } from 'react-icons/fa';
+import { FaThLarge, FaUser, FaCreditCard,FaChartBar, FaCog, FaSignOutAlt, FaBell } from 'react-icons/fa';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import TutorProfile from '../components/TutorProfile';
 
@@ -60,7 +60,7 @@ const AdminDashboard = () => {
             </li>
             <li className="px-4 py-3">
               <a href="#" className="flex items-center text-gray-600">
-                <FaBarChart className="mr-3 text-lg md:text-xl" />
+                <FaChartBar className="mr-3 text-lg md:text-xl" />
                 Reports
               </a>
             </li>
