@@ -62,6 +62,8 @@ export default function ExploreCourse() {
                       className="h-48 w-full object-cover rounded-xl"
                       src="https://cdn4.vectorstock.com/i/1000x1000/18/58/color-silhouette-cartoon-half-body-faceless-man-vector-15091858.jpg"
                       alt="Mountain"
+                      width={200}
+                      height={200}
                     />
                   </div>
                   <div className="p-4">
@@ -85,9 +87,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="currentColor"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-yellow-500"
                             viewBox="0 0 24 24"
                           >
@@ -96,9 +98,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="currentColor"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-yellow-500"
                             viewBox="0 0 24 24"
                           >
@@ -107,9 +109,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="currentColor"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-yellow-500"
                             viewBox="0 0 24 24"
                           >
@@ -118,9 +120,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="none"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-slate-300"
                             viewBox="0 0 24 24"
                           >
@@ -129,9 +131,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="none"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-slate-300"
                             viewBox="0 0 24 24"
                           >
@@ -185,9 +187,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="currentColor"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-yellow-500"
                             viewBox="0 0 24 24"
                           >
@@ -196,9 +198,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="currentColor"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-yellow-500"
                             viewBox="0 0 24 24"
                           >
@@ -207,9 +209,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="currentColor"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-yellow-500"
                             viewBox="0 0 24 24"
                           >
@@ -218,9 +220,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="none"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-slate-300"
                             viewBox="0 0 24 24"
                           >
@@ -229,9 +231,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="none"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-slate-300"
                             viewBox="0 0 24 24"
                           >
@@ -285,9 +287,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="currentColor"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-yellow-500"
                             viewBox="0 0 24 24"
                           >
@@ -296,9 +298,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="currentColor"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-yellow-500"
                             viewBox="0 0 24 24"
                           >
@@ -307,9 +309,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="currentColor"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-yellow-500"
                             viewBox="0 0 24 24"
                           >
@@ -318,9 +320,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="none"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-slate-300"
                             viewBox="0 0 24 24"
                           >
@@ -329,9 +331,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="none"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-slate-300"
                             viewBox="0 0 24 24"
                           >
@@ -385,9 +387,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="currentColor"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-yellow-500"
                             viewBox="0 0 24 24"
                           >
@@ -396,9 +398,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="currentColor"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-yellow-500"
                             viewBox="0 0 24 24"
                           >
@@ -407,9 +409,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="currentColor"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-yellow-500"
                             viewBox="0 0 24 24"
                           >
@@ -418,9 +420,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="none"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-slate-300"
                             viewBox="0 0 24 24"
                           >
@@ -429,9 +431,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="none"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-slate-300"
                             viewBox="0 0 24 24"
                           >
@@ -485,9 +487,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="currentColor"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-yellow-500"
                             viewBox="0 0 24 24"
                           >
@@ -496,9 +498,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="currentColor"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-yellow-500"
                             viewBox="0 0 24 24"
                           >
@@ -507,9 +509,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="currentColor"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-yellow-500"
                             viewBox="0 0 24 24"
                           >
@@ -518,9 +520,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="none"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-slate-300"
                             viewBox="0 0 24 24"
                           >
@@ -529,9 +531,9 @@ export default function ExploreCourse() {
                           <svg
                             fill="none"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-4 h-4 text-slate-300"
                             viewBox="0 0 24 24"
                           >
@@ -553,6 +555,6 @@ export default function ExploreCourse() {
         </div>
         </TabPanel>
       </TabContext>
-    </Box>
-  );
+    </Box>
+  );
 }

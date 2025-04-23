@@ -130,7 +130,7 @@ const Certifications = () => {
               {/* Tutor Info */}
               <div className="flex items-center gap-4">
                 <img
-                  src="https://cdn4.vectorstock.com/i/1000x1000/18/58/color-silhouette-cartoon-half-body-faceless-man-vector-15091858.jpg"
+                  src="https://cdn4..com/i/1000x1000/18/58/color-silhouette-cartoon-half-body-faceless-man-vector-15091858.jpg"
                   alt={tutor.name}
                   className="w-10 h-10 rounded-full"
                 />

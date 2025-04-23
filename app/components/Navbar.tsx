@@ -29,7 +29,10 @@ const Navbar = () => {
             </a>
           </li>
           <li>
+
             <a href="/contactus" className="hover:text-blue-600 transition duration-300">
+
+            
               Contact Us
             </a>
           </li>
@@ -126,7 +129,9 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
+
                     href="contactus"
+
                     className="hover:text-blue-600 transition duration-300"
                   >
                     Contact Us
