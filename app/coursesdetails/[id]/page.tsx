@@ -3,8 +3,9 @@ import { notFound } from "next/navigation";
 import { Star } from "lucide-react";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
-import {ChevronDown, Phone, Check } from 'lucide-react';
+import {ChevronDown, Phone, Check,Undo2 } from 'lucide-react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import * as Accordion from "@radix-ui/react-accordion";
 
 // Slugify helper - must match Course.tsx logic
 const slugify = (title: string) =>
@@ -124,25 +125,52 @@ const CourseDetails = ({ params }: Props) => {
                   <h4 className="text-2xl font-semibold mb-8">Course Content</h4>
 
                   {course.content && Array.isArray(course.content) ? (
-                    <ul className="space-y-4">
-                      {course.content.map((item, index) => {
-                        const noMarginTitles = ["Course Intro", "Watch Before Start",];
-                        const marginClass = noMarginTitles.includes(item.title) ? "" : "mb-7";
+                    <Accordion.Root
+                    type="multiple"
+                    className="space-y-2">
 
-                        return (
-                          <li key={index} className="flex justify-between items-center">
-                            <span className={`text-gray-900 ${marginClass}`}>{item.title}</span>
-                            <span className="font-medium text-blue-600 rounded-full px-1 bg-blue-100">{item.duration}</span>
-                          </li>
-                        );
-                      })}
-                    </ul>
+                    {course.content.map((item, index) => (
+                      <Accordion.Item
+                        key={index}
+                        value={`item-${index}`}>
+
+                        <Accordion.Trigger className="group w-full flex items-center justify-between px-4 py-3 text-left text-gray-900 font-medium transition">
+                          <div className="flex items-center space-x-4">
+                            <span>{item.title}</span>
+                            <span className="font-medium text-blue-600 rounded-full px-1 bg-blue-100">
+                              {item.duration}
+                            </span>
+                          </div>
+                          <ChevronDown className="h-5 w-5 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+                        </Accordion.Trigger>
+
+                        <Accordion.Content className="px-4 py-2 bg-white text-gray-700 text-sm border-t">
+                          <div className="mb-6 flex justify-between items-center">
+                            <span className="text-base text-gray-900">Course Intro</span>
+                            <span className="font-medium text-blue-600 rounded-full px-1 bg-blue-100">
+                              {item.type}
+                            </span>
+                          </div>
+                          <div className="mt-4 mb-6 flex justify-between items-center">
+                            <span className="text-base text-gray-900">Watch Befor Start</span>
+                            <span className="font-medium text-blue-600 rounded-full px-1 bg-blue-100">
+                              {item.type}
+                            </span>
+                          </div>
+                          <div className="mt-4 mb-6 flex justify-between items-center">
+                            <span className="text-base text-gray-900">Read Before Start</span>
+                            <span className="font-medium text-blue-600 rounded-full px-1 bg-blue-100">
+                              {item.type}
+                            </span>
+                          </div>
+                        </Accordion.Content>
+                      </Accordion.Item>
+                    ))}
+                  </Accordion.Root>
                   ) : (
                     <p className="text-gray-600">Course content will be available soon.</p>
                   )}
               </div>
-
-              
           </div>
 
         <div className="sticky top-8 self-start w-80 mx-auto m-4 bg-white border border-blue-400 rounded-lg shadow-sm p-4">
@@ -163,11 +191,9 @@ const CourseDetails = ({ params }: Props) => {
           <button className="w-full bg-white hover:bg-gray-200 text-gray-700 py-3 rounded-full mb-4 border border-gray-300 font-medium">
             Buy Now
           </button>
-
+  
           <div className="flex items-center text-sm text-gray-600 mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clipRule="evenodd" />
-            </svg>
+            <Undo2 className="h-5 w-5 mr-2 text-blue-600" />
             30-Day Money Back Guarantee
           </div>
 
