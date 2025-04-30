@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const Hero = () => {
@@ -22,8 +23,13 @@ const Hero = () => {
     your dreams
   </p>
 
+        <Link href="/blog/createblog's">
+          <button className="w-full md:w-auto px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition">
+            + Create New Blog
+          </button>
+        </Link>
   {/* Slim Search Bar */}
-  <div className="flex items-center w-full bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+  {/* <div className="flex items-center w-full bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
     <span className="text-gray-400 pl-3 ">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +58,7 @@ const Hero = () => {
     >
       Start Learning
     </button>
-  </div>
+  </div> */}
 </div>
 
 {/* Right Section: Image */}
