@@ -4,7 +4,7 @@ import { useState } from "react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-[#daf0ff] py-4 px-6">
+    <nav className="bg-transparent py-4 px-6">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-blue-600 font-semibold text-lg md:text-xl">
@@ -29,10 +29,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-
             <a href="/contactus" className="hover:text-blue-600 transition duration-300">
-
-            
               Contact Us
             </a>
           </li>
@@ -41,13 +38,13 @@ const Navbar = () => {
         {/* Buttons */}
         <div className="hidden md:flex space-x-4 items-center">
           <a
-            href="http://localhost:3000/signin#signup"
+            href="/components/signup"
             className="text-blue-600 font-medium hover:text-blue-800 transition duration-300"
           >
             Sign up
           </a>
           <a
-            href="http://localhost:3000/signin"
+            href="/logIn"
             className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300"
           >
             Log in
@@ -129,9 +126,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-
-                    href="contactus"
-
+                    href="/contactus"
                     className="hover:text-blue-600 transition duration-300"
                   >
                     Contact Us

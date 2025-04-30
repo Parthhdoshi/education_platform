@@ -1,4 +1,4 @@
-"use client";
+"use client";  //made by sandip
 
 import React, { useEffect, useState } from "react";
 
@@ -20,4 +20,4 @@ const DogImage: React.FC = () => {
   );
 };
 
-export default DogImage;
+export default DogImage;

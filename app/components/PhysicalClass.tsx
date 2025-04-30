@@ -2,10 +2,10 @@ import React from "react";
 
 const PhysicalClass = () => {
   return (
-    <section className="bg-blue-50 py-10">
+    <section className="bg-[#daf0ff] py-10">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
-        <h2 className="text-2xl font-bold text-center text-purple-600 mb-6">
+        <h2 className="text-3xl font-bold text-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
           Physical Classes
         </h2>
         <p className="text-center text-gray-600 mb-10">
@@ -17,7 +17,7 @@ const PhysicalClass = () => {
         </p>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Card 1: Upcoming Sessions */}
           <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
             <div className="text-blue-600 mb-4">
@@ -28,6 +28,7 @@ const PhysicalClass = () => {
                 strokeWidth={2}
                 stroke="currentColor"
                 className="w-12 h-12"
+                style={{ transform: "rotate(180deg)" }}
               >
                 <path
                   strokeLinecap="round"
@@ -50,6 +51,7 @@ const PhysicalClass = () => {
                 strokeWidth={2}
                 stroke="currentColor"
                 className="w-12 h-12"
+                style={{ transform: "rotate(180deg)" }}
               >
                 <path
                   strokeLinecap="round"
@@ -74,6 +76,7 @@ const PhysicalClass = () => {
                 strokeWidth={2}
                 stroke="currentColor"
                 className="w-12 h-12"
+                style={{ transform: "rotate(180deg)" }}
               >
                 <path
                   strokeLinecap="round"
@@ -91,7 +94,7 @@ const PhysicalClass = () => {
             </p>
             <p className="text-gray-600 text-sm mt-1">Class Duration: 1 hour</p>
             <p className="text-gray-600 text-sm mt-1">Class Type: One-on-one</p>
-            <button className="mt-4 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
+            <button className="flex mt-4 px-2 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
               Reschedule Class
             </button>
           </div>

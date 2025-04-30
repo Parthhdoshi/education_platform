@@ -7,7 +7,7 @@ const Certifications = () => {
       title: "Financial Literacy 101",
       description:
         "Understand budgeting, saving, and investing to manage personal or business finances.",
-      img: "https://www.kreditbee.in/blog/content/images/2023/12/shutterstock_2195605515-min.jpg",
+      img: "https://www.shutterstock.com/image-vector/financial-literacy-budgeting-managing-personal-260nw-2307242813.jpg",
       rating: 4,
       progress: 50,
     },
@@ -23,7 +23,7 @@ const Certifications = () => {
       title: "Nutrition and Wellness Essentials",
       description:
         "Learn about balanced diets, food nutrients, and how to maintain a healthy lifestyle.",
-      img: "https://th.bing.com/th/id/OIP.lu4EC8oiJVzzZ2mjlsRrngHaFy?w=960&h=750&rs=1&pid=ImgDetMain",
+      img: "https://motionarray.imgix.net/motion-array-2916866-jAhwN1Hscb-high_0008.jpg?w=660&q=60&fit=max&auto=format",
       rating: 5,
       progress: 85,
     },
@@ -51,21 +51,23 @@ const Certifications = () => {
   ];
 
   return (
-    <section className="bg-blue-50 py-10">
+    <section className="bg-[#daf0ff] py-10">
       <div className="max-w-7xl mx-auto">
         {/* Certifications Section */}
-        <h2 className="text-2xl font-bold text-center text-purple-600 mb-4">
+        <h2 className="text-3xl p-10 font-bold text-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
           Enrolled Certification Courses
         </h2>
-        <div className="grid grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {certifications.map((cert, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden"
+              className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
             >
               <Image
                 src={cert.img}
                 alt={cert.title}
+                width={800}
+                height={192}
                 className="w-full h-48 object-cover"
               />
               <div className="p-4">
@@ -80,7 +82,7 @@ const Certifications = () => {
                   <div className="bg-gray-200 rounded-full h-2.5">
                     <div
                       className="bg-purple-600 h-2.5 rounded-full"
-                      style={{ width: `${cert.progress}%` }}
+                      style={{ width: '${cert.progress}%' }}
                     ></div>
                   </div>
                   <p className="text-sm text-gray-500 mt-1">
@@ -115,7 +117,7 @@ const Certifications = () => {
         </div>
 
         {/* Leaderboard Section */}
-        <h2 className="text-2xl font-bold text-center text-purple-600 mb-4">
+        <h2 className="text-3xl font-bold text-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
           Leaderboard
         </h2>
         <p className="text-center text-gray-600 mb-6">
@@ -130,7 +132,7 @@ const Certifications = () => {
               {/* Tutor Info */}
               <div className="flex items-center gap-4">
                 <img
-                  src="https://cdn4..com/i/1000x1000/18/58/color-silhouette-cartoon-half-body-faceless-man-vector-15091858.jpg"
+                  src="https://cdn4.vectorstock.com/i/1000x1000/18/58/color-silhouette-cartoon-half-body-faceless-man-vector-15091858.jpg"
                   alt={tutor.name}
                   className="w-10 h-10 rounded-full"
                 />
@@ -147,7 +149,7 @@ const Certifications = () => {
                 </div>
               </div>
               {/* Rating and Buttons */}
-              <div className="flex items-center gap-4">
+              <div className="flex flex-wrap items-center gap-4">
                 <div className="flex">
                   {Array.from({ length: 5 }).map((_, starIndex) => (
                     <svg

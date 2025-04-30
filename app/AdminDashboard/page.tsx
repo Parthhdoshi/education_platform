@@ -1,12 +1,14 @@
-"use client";
+'use client';
 
-import React from 'react';
-import { FaThLarge, FaUser, FaCreditCard, FaCog,  FaSignOutAlt, FaBell, FaChartBar } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaThLarge, FaUser , FaCreditCard, FaCog, FaBell, FaChartBar } from 'react-icons/fa';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
-import TutorProfile from '../components/TutorProfile';
+import { Menu } from "lucide-react";
 
 const AdminDashboard = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  // Mock data for stats
   const stats = [
     { number: 33, label: "Total Students", icon: "👤" },
     { number: 82, label: "Courses Sold", icon: "📚" },
@@ -14,7 +16,7 @@ const AdminDashboard = () => {
     { number: 19, label: "Students Enrolled", icon: "🧑‍🎓" },
   ];
 
-
+  // Updated activity log data to match image exactly
   const activityLog = [
     { activity: "New user registered", details: "Tutor signed up", status: "Approved", action: "View profile" },
     { activity: "New student enrolment", details: "Student enrolled in UIUX course", status: "Pending", action: "View profile" },
@@ -29,26 +31,21 @@ const AdminDashboard = () => {
     { name: 'Monthly', value: 30, color: '#60A5FA' },
   ];
 
-  return (
-    <div className="flex flex-wrap bg-blue-500">
-
-      {/* Sidebar */}
-      <aside className="w-64 bg-white shadow-md">
-        <div className="p-4">
-          <h2 className="text-xl font-semibold text-blue-600">Minimalistic Learning</h2>
-        </div>
+  // Sidebar component
+  const Sidebar = () => {
+    return (
+      <aside className={`bg-white min-h-screen top-0 shadow-md transition-transform duration-300 w-64 fixed z-50 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:static md:flex md:flex-col`}>
         <nav className="mt-6">
           <ul>
-            <li className="px-4 py-3 text-indigo-900 via-purple-900 to-pink-900 font-bold">
+            <li className="px-4 py-3 text-indigo-900 font-bold">
               <a href="/AdminDashboard" className="flex items-center">
                 <FaThLarge className="mr-3 text-lg md:text-xl" />
                 Dashboard
               </a>
             </li>
-            {/* Add other navigation items */}
             <li className="px-4 py-3">
               <a href="#" className="flex items-center text-gray-600">
-                <FaUser className="mr-3 text-lg md:text-xl" />
+                <FaUser  className="mr-3 text-lg md:text-xl" />
                 User Management
               </a>
             </li>
@@ -74,36 +71,40 @@ const AdminDashboard = () => {
         </nav>
 
         {/* Logout section */}
-
         <div className="fixed -bottom-4 flex">
-  <a 
-    href="/#" 
-    className="fixed bottom-4 flex text-red-500 hover:text-red-700 mt-4">
-    <span className="font-semibold text-lg ml-8">{'[-> '}Log out</span>
-  </a>
-</div>
-
-
+          <a 
+            href="/#" 
+            className="fixed bottom-4 flex text-red-500 hover:text-red-700 mt-4">
+            <span className="font-semibold text-lg ml-8">{'[-> '}Log out</span>
+          </a>
+        </div>
       </aside>
+    );
+  };
+
+  return (
+    <div className="flex flex-wrap bg-blue-500">
+      <Sidebar />
 
       {/* Main Content */}
-      <main className="flex-1 p-4 md:p-3 bg-[#daf0ff]">
-        {/* Header with Dashboard title, notifications, and user profile */}
-    <div className="flex justify-between items-center bg-white  p-4 mt-16 lg:mt-0">
-    <h1 className="text-x2 md:text-2xl text-blue-800">Dashboard</h1>
-
-           {/* Right Side: Notifications & Profile */}
-          <div className="flex items-center space-x-4 md:space-x-6">
+      <main className="flex-1 bg-[#daf0ff]">
+        {/* Mobile Toggle Button */}
+        <button
+          className={`flex left-2 z-50 p-2 bg-transparent text-black rounded-lg transition-transform duration-300 md:hidden ${isSidebarOpen ? 'translate-x-64' : 'translate-x-0'}`}
+          onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+          <Menu className="h-6 w-6" />
+        </button>
+        {/* Header with notifications, and user profile */}
+        <div className="flex flex-wrap bg-white shadow-md px-8 justify-end items-center">
+          <div className="flex items-center space-x-6">
             {/* Notification Icon with Badge */}
             <div className="relative cursor-pointer">
               <FaBell className="text-gray-600 text-xl md:text-2xl" />
-              <span className="absolute -top-1 -right-2 bg-red-500 text-white text-xs rounded-full px-1">
-                2
-              </span>
+              <span className="absolute -top-1 -right-2 bg-red-500 text-white text-xs rounded -full px-1">2</span>
             </div>
 
             {/* User Profile */}
-            <div className="relative flex items-center space-x-2">
+            <div className="relative flex p-1 items-center space-x-2">
               <img
                 src="https://cdn-icons-png.flaticon.com/128/1999/1999625.png"
                 alt="Icon"
@@ -126,7 +127,7 @@ const AdminDashboard = () => {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div className="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           {stats.map((stat, index) => (
             <div 
               key={index} 
@@ -140,7 +141,7 @@ const AdminDashboard = () => {
         </div>
 
         {/* Popular Courses */}
-        <div className="mb-8">
+        <div className="p-4 mb-8">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl text-blue-700 font-semibold">Popular Courses</h2>
             <a href="#" className="text-blue-600 text-sm">View all</a>
@@ -150,15 +151,10 @@ const AdminDashboard = () => {
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
               <div className="relative">
                 <img 
-                  src="https://files.oaiusercontent.com/file-JsTf2TAH5UtJKHy4XPG3UH?se=2025-03-30T10%3A09%3A23Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dce57c013-0268-42e8-a586-e7a34926a94f.webp&sig=E0V7DYQLCarO%2BXEAp7EXM%2BY8K5BGP9YblhROBVv7fkA%3D" 
+                  src="https://www.shutterstock.com/image-vector/financial-literacy-budgeting-managing-personal-260nw-2307242813.jpg" 
                   alt="Finance Course" 
                   className="w-full h-48 object-cover" 
                 />
-                <button className="absolute bottom-4 right-4 p-2 bg-white rounded-lg shadow-sm">
-                  <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5h14M5 12h14m-14 7h14" />
-                  </svg>
-                </button>
               </div>
               <div className="p-4">
                 <h3 className="font-semibold text-black mb-2">Finance Course</h3>
@@ -170,15 +166,10 @@ const AdminDashboard = () => {
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
               <div className="relative">
                 <img 
-                  src="https://files.oaiusercontent.com/file-D72BNrFAEcra3TfKAhpChK?se=2025-03-30T10%3A09%3A23Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D6e08ee36-3be1-4906-873d-5618c6ddaa98.webp&sig=cE3h4ZzeFiUty8ChkjOBoM6JbzwQso0dfFBPB2KXVv8%3D" 
+                  src="https://media.istockphoto.com/id/1413990965/photo/glowing-python-programming-language-code-on-a-blue-digital-surface-with-a-sphere-grid-design.jpg?s=612x612&w=0&k=20&c=sC5Gcktg85_J6e50P5DGngrez1MElLql5xrYKd13sA4=" 
                   alt="Programming Course" 
                   className="w-full h-48 object-cover" 
                 />
-                <button className="absolute bottom-4 right-4 p-2 bg-white rounded-lg shadow-sm">
-                  <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5h14M5 12h14m-14 7h14" />
-                  </svg>
-                </button>
               </div>
               <div className="p-4">
                 <h3 className="font-semibold text-black mb-2">Programming Basics</h3>
@@ -190,15 +181,10 @@ const AdminDashboard = () => {
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
               <div className="relative">
                 <img 
-                  src="https://files.oaiusercontent.com/file-RuTA9ZPqeDJxz772uwwAK9?se=2025-03-30T10%3A09%3A23Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Ddcb445bf-9752-481c-98e6-199a816145c2.webp&sig=3vUpagmk4m0HHMBhkAtDZGoNcbaaKsr9lOQOfXEwn3w%3D" 
+                  src="https://motionarray.imgix.net/motion-array-2916866-jAhwN1Hscb-high_0008.jpg?w=660&q=60&fit=max&auto=format" 
                   alt="Fitness Course" 
                   className="w-full h-48 object-cover" 
                 />
-                <button className="absolute bottom-4 right-4 p-2 bg-white rounded-lg shadow-sm">
-                  <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5h14M5 12h14m-14 7h14" />
-                  </svg>
-                </button>
               </div>
               <div className="p-4">
                 <h3 className="font-semibold text-black mb-2">Fitness Training</h3>
@@ -209,14 +195,12 @@ const AdminDashboard = () => {
         </div>
 
         {/* Activity Log and Student Engagement Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
-          {/* Activity Log Title (Outside Box) */}
-          <h2 className="text-lg font-medium text-blue-700 lg:col-span-2">Activity Log</h2>
-          {/* Student Engagement Title (Outside Box) */}
-          <h2 className="text-lg font-medium text-blue-700">Student Engagement</h2>
+        <div className="p-4 grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
 
           {/* Activity Log Box */}
-          <div className="lg:col-span-2 bg-white rounded-xl shadow-sm p-4 md:p-6">
+          <div  className="lg:col-span-2">
+          <h2 className="text-lg font-medium text-blue-700 mb-4 lg:col-span-2">Activity Log</h2>
+          <div className=" bg-white rounded-xl shadow-sm p-4 md:p-14">
             <table className="w-full">
               <thead>
                 <tr className="text-left text-gray-500 text-sm">
@@ -248,8 +232,11 @@ const AdminDashboard = () => {
               </tbody>
             </table>
           </div>
+          </div>
 
           {/* Student Engagement Box */}
+          <div>
+          <h2 className="text-lg font-medium mb-4 text-blue-700">Student Engagement</h2>
           <div className="p-4 md:p-6 bg-white rounded-xl shadow-md">
             <div className="flex justify-center items-center mb-6">
               <ResponsiveContainer width={250} height={250}>
@@ -265,29 +252,25 @@ const AdminDashboard = () => {
                     cy="50%"
                     label={({ value, x, y }) => (
                       <text 
-                      x={x} 
-                      y={y} 
-                      fill="#000"        
-                      fontSize="12px"
-                      textAnchor="middle" 
-                      dominantBaseline="central"
-                    >
-                      {`${value}%`}      
-                    </text>
-                    
-                      
+                        x={x} 
+                        y={y} 
+                        fill="#000"        
+                        fontSize="12px"
+                        textAnchor="middle" 
+                        dominantBaseline="central"
+                      >
+                        {`${value}%`}      
+                      </text>
                     )}
-                      labelLine={false}
+                    labelLine={false}
                   >
-                  {engagementData.map((entry, index) => (
-  <Cell 
-    key={`cell-${index}`}     
-    fill={entry.color}
-    stroke="none"
-  />
-))}
-
-                    
+                    {engagementData.map((entry, index) => (
+                      <Cell 
+                        key={`cell-${index}`}     
+                        fill={entry.color}
+                        stroke="none"
+                      />
+                    ))}
                   </Pie>
                 </PieChart>
               </ResponsiveContainer>
@@ -303,10 +286,11 @@ const AdminDashboard = () => {
               ))}
             </div>
           </div>
+          </div>
         </div>
       </main>
     </div>
   );
 };
 
-export default AdminDashboard;
+export default AdminDashboard;

@@ -1,6 +1,6 @@
 "use client";
 
-import { signIn } from "next-auth/react";
+import { logIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -13,17 +13,17 @@ export function CredentialsForm() {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
 
-    const signInResponse = await signIn("credentials", {
+    const logInResponse = await logIn("credentials", {
       email: data.get("email"),
       password: data.get("password"),
       redirect: false,
     });
 
-    if (signInResponse && !signInResponse.error) {
+    if (logInResponse && !logInResponse.error) {
       //Redirect to homepage (/dashboard)
       router.push("/dashboard");
     } else {
-      console.log("Error: ", signInResponse);
+      console.log("Error: ", logInResponse);
       setError("Your Email or Password is wrong!");
     }
   };

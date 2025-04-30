@@ -30,15 +30,15 @@ const TutorList = () => {
   ];
 
   return (
-    <section className="bg-blue-50 py-10">
+    <section className="bg-[#daf0ff] py-10">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
-        <h2 className="text-2xl font-bold text-center text-blue-600 mb-6">
+        <h2 className="text-3xl font-bold text-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
           Tutor List
         </h2>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {tutors.map((tutor, index) => (
             <div
               key={index}
@@ -48,8 +48,11 @@ const TutorList = () => {
               <Image
                 src={tutor.img}
                 alt={tutor.name}
-                className="w-20 h-20 rounded-full mb-4"
+                width={20}
+                height={20}
+                className="rounded-full mb-4"
               />
+
               {/* Tutor Details */}
               <h3 className="text-lg font-bold text-gray-800">{tutor.name}</h3>
               <p className="text-gray-600 text-sm mt-2">
@@ -81,10 +84,10 @@ const TutorList = () => {
               </div>
               {/* Action Buttons */}
               <div className="mt-6 flex gap-4">
-                <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                <button className="flex px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
                   Book a Class
                 </button>
-                <button className="px-4 py-2 bg-gray-100 text-blue-600 rounded-lg hover:bg-gray-200 border">
+                <button className="flex px-3 py-2 bg-gray-100 text-blue-600 rounded-lg hover:bg-gray-200 border">
                   View Profile
                 </button>
               </div>

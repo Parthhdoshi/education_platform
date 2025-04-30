@@ -25,6 +25,8 @@ const CoursePageFooter = () => {
           <Image
             src="https://via.placeholder.com/150"
             alt="Email Illustration"
+            width={150}
+            height={150}
             className="mx-auto"
           />
         </div>
@@ -79,21 +81,24 @@ const CoursePageFooter = () => {
                 <Image
                   src="https://via.placeholder.com/24"
                   alt="Facebook"
-                  className="w-6 h-6"
+                  width={6}
+                  height={6}
                 />
               </a>
               <a href="#" className="hover:opacity-80">
                 <Image
                   src="https://via.placeholder.com/24"
                   alt="Twitter"
-                  className="w-6 h-6"
+                  width={6}
+                  height={6}
                 />
               </a>
               <a href="#" className="hover:opacity-80">
                 <Image
                   src="https://via.placeholder.com/24"
                   alt="YouTube"
-                  className="w-6 h-6"
+                  width={6}
+                  height={6}
                 />
               </a>
             </div>
